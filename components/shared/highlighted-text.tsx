@@ -27,3 +27,24 @@ export function highlightAccent(text: string, accent: string): ReactNode {
     </>
   );
 }
+
+/** Render `**keyword**` markers as bold, for scannable tour copy. */
+export function emphasizeKeywords(text: string): ReactNode {
+  const parts = text.split(/(\*\*[^*]+\*\*)/g);
+  return parts.map((part, i) => {
+    const match = /^\*\*([^*]+)\*\*$/.exec(part);
+    if (match) {
+      return (
+        <strong key={i} className="font-semibold text-text">
+          {match[1]}
+        </strong>
+      );
+    }
+    return part;
+  });
+}
+
+/** Plain-text version of copy that uses `**keyword**` markers. */
+export function stripEmphasis(text: string): string {
+  return text.replace(/\*\*([^*]+)\*\*/g, '$1');
+}

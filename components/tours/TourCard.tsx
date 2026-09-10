@@ -3,6 +3,7 @@ import {useTranslations} from 'next-intl';
 
 import type {Tour} from '@/data/tours';
 import {Link} from '@/i18n/navigation';
+import {stripEmphasis} from '@/components/shared/highlighted-text';
 
 export function TourCard({tour}: {tour: Tour}) {
   const t = useTranslations();
@@ -30,7 +31,7 @@ export function TourCard({tour}: {tour: Tour}) {
 
         <div className="flex flex-col p-6 flex-1">
           <h3 className="text-xl leading-tight">{tour.name}</h3>
-          <p className="mt-2 text-sm leading-6 text-text-muted">{tour.tagline}</p>
+          <p className="mt-2 text-sm leading-6 text-text-muted">{stripEmphasis(tour.tagline)}</p>
 
           <div className="mt-5 flex items-center gap-4 text-sm text-text-muted">
             <span className="flex items-center gap-1">
