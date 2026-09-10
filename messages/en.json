@@ -10,32 +10,14 @@
     "bookNow": "Book a Tour"
   },
   "hero": {
-    "headline": "You bring the curiosity. I'll take care of the rest.",
+    "headline": "Come curious\nLeave with stories",
     "accentWord": "private",
-    "subheadline": "Private tours around the Riviera Maya, built around your group, your pace, and the places you'll remember.",
+    "subheadline": "Private tours around the Riviera Maya.\nBuilt around your group, your pace, and the places you'll remember.",
     "cta": {
       "book": "See the tours",
       "whatsapp": "WhatsApp me"
     },
     "scroll": "Explore"
-  },
-  "trust": {
-    "rating": {
-      "title": "5.0 on ToursByLocals",
-      "subtitle": "200+ five-star reviews"
-    },
-    "languages": {
-      "title": "EN · ES · RU",
-      "subtitle": "Everyone understood"
-    },
-    "private": {
-      "title": "Your group only",
-      "subtitle": "No strangers, ever"
-    },
-    "based": {
-      "title": "8 years guiding",
-      "subtitle": "Riviera Maya expert"
-    }
   },
   "whyKat": {
     "eyebrow": "Meet your guide",
@@ -202,12 +184,12 @@
     "included": "What's included",
     "important": "Good to know",
     "highlights": "Highlights",
-    "notIncluded": "Not included",
     "gallery": "Gallery",
     "transportIncluded": "Hotel pickup and drop-off is always included - Playa del Carmen, Tulum, Puerto Aventuras, and Akumal.",
     "transportLabel": "Transport",
     "transportValue": "Hotel pickup and drop-off included",
     "bookThis": "Book this tour",
+    "talkToKat": "Talk to Kat",
     "askWhatsapp": "Ask me a question",
     "related": "Other tours you might like"
   },

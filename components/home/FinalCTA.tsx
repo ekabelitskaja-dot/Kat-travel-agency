@@ -12,7 +12,7 @@ export function FinalCTA() {
   const emailUrl = mailLink('Tour Inquiry');
 
   return (
-    <section className="bg-surface">
+    <section id="contact" className="bg-surface">
       <div className="mx-auto max-w-6xl px-6 pb-16 md:pb-20">
         <div
           className="rounded-3xl border border-text/10 bg-white/65 backdrop-blur-sm p-10 md:p-14"

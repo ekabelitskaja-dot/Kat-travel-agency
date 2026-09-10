@@ -4,6 +4,7 @@
 
 [build.environment]
   NODE_VERSION = "20"
+  NEXT_PUBLIC_SITE_URL = "https://mexicowithkat.com"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"

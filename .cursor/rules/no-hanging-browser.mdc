@@ -1,0 +1,13 @@
+---
+description: Do not use Cursor browser automation — it hangs and wastes time
+alwaysApply: true
+---
+
+# No hanging browser tools
+
+Do not use `cursor-ide-browser` (browser_navigate, browser_lock, browser_tabs, browser_snapshot, browser_cdp, or any other tool in that namespace). In this project it freezes for minutes waiting for a glass browser tab that never opens.
+
+For UI checks:
+- Trust the code change and ask the user to glance at localhost
+- Use a quick `curl` against the running Next.js server if you only need to confirm the page responds
+- Never retry a hung browser call, and never wait more than a few seconds on a tool that already timed out

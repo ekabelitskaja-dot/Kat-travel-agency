@@ -14,7 +14,7 @@ export function ExperienceBuilderCard() {
   const [open, setOpen] = useState(false);
 
   return (
-    <>
+    <div className="h-full">
       <article className="group h-full overflow-hidden rounded-3xl border border-dashed border-accent/40 bg-white shadow-[0_16px_40px_rgba(28,28,26,0.10)] flex flex-col">
         <button
           type="button"
@@ -22,7 +22,7 @@ export function ExperienceBuilderCard() {
           className="flex flex-1 flex-col text-left"
         >
           {/* Icon header, standing in for the photo the real tours have */}
-          <div className="relative flex h-40 items-center justify-center overflow-hidden bg-accent/10">
+          <div className="relative flex aspect-[4/3] items-center justify-center overflow-hidden bg-accent/10">
             <div className="flex items-center gap-3">
               {HEADER_ICONS.map((IconCmp, i) => (
                 <span
@@ -68,6 +68,6 @@ export function ExperienceBuilderCard() {
       </article>
 
       <ExperienceBuilderModal isOpen={open} onClose={() => setOpen(false)} />
-    </>
+    </div>
   );
 }

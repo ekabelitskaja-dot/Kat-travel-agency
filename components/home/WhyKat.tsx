@@ -27,7 +27,7 @@ export function WhyKat() {
         <img
           src="/photos/guide/kat-private-tour-guide-mexico.jpg"
           alt="Kat B., private tour guide, in a stone passageway at the Cobá ruins"
-          className="w-full h-[320px] object-cover [object-position:center_40%]"
+          className="w-full h-[320px] object-cover object-[30%_78%]"
         />
         <div className="px-6 py-8 bg-white">
           <SectionHeading eyebrow={t('whyKat.eyebrow')} title={t('whyKat.title')} accentPhrase="you around!" />
@@ -39,13 +39,12 @@ export function WhyKat() {
 
       {/* Desktop: two columns side by side */}
       <div className="hidden md:grid grid-cols-2 min-h-[600px]">
-        {/* Image column */}
         <div className="relative">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/photos/guide/kat-private-tour-guide-mexico.jpg"
             alt="Kat B., private tour guide, in a stone passageway at the Cobá ruins"
-            className="absolute inset-0 w-full h-full object-cover [object-position:center_40%]"
+            className="absolute inset-0 w-full h-full object-cover object-[30%_78%]"
           />
         </div>
         {/* Text column */}

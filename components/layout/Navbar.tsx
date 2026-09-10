@@ -101,11 +101,10 @@ export function Navbar() {
               </Link>
 
               <nav className="hidden md:flex items-center gap-1">
-                <NavLink href="#tours" transparent={transparent}>{t('nav.tours')}</NavLink>
-                <NavLink href="#reviews" transparent={transparent}>{t('nav.reviews')}</NavLink>
-                <NavLink href="#about" transparent={transparent}>{t('nav.about')}</NavLink>
-                <NavLink href="#gallery" transparent={transparent}>{t('nav.gallery')}</NavLink>
-                <NavLink href="#contact" transparent={transparent}>{t('nav.contact')}</NavLink>
+                <NavLink href="/tours" transparent={transparent}>{t('nav.tours')}</NavLink>
+                <NavLink href="/about" transparent={transparent}>{t('nav.about')}</NavLink>
+                <NavLink href="/services" transparent={transparent}>{t('nav.services')}</NavLink>
+                <NavLink href="/contact" transparent={transparent}>{t('nav.contact')}</NavLink>
               </nav>
             </div>
 
@@ -140,11 +139,10 @@ export function Navbar() {
           {open && (
             <div className="md:hidden px-6 pb-4">
               <div className="flex flex-col gap-2 rounded-xl bg-white/80 backdrop-blur-xl border border-white/40 p-4">
-                <NavLink href="#tours" onNavigate={() => setOpen(false)}>{t('nav.tours')}</NavLink>
-                <NavLink href="#reviews" onNavigate={() => setOpen(false)}>{t('nav.reviews')}</NavLink>
-                <NavLink href="#about" onNavigate={() => setOpen(false)}>{t('nav.about')}</NavLink>
-                <NavLink href="#gallery" onNavigate={() => setOpen(false)}>{t('nav.gallery')}</NavLink>
-                <NavLink href="#contact" onNavigate={() => setOpen(false)}>{t('nav.contact')}</NavLink>
+                <NavLink href="/tours" onNavigate={() => setOpen(false)}>{t('nav.tours')}</NavLink>
+                <NavLink href="/about" onNavigate={() => setOpen(false)}>{t('nav.about')}</NavLink>
+                <NavLink href="/services" onNavigate={() => setOpen(false)}>{t('nav.services')}</NavLink>
+                <NavLink href="/contact" onNavigate={() => setOpen(false)}>{t('nav.contact')}</NavLink>
                 <button onClick={() => { setOpen(false); openModal(); }} className="w-full mt-1">
                   <Button className="w-full">{t('nav.bookNow')}</Button>
                 </button>

@@ -1,6 +1,7 @@
 import type {Metadata} from 'next';
 import {DM_Sans, Oswald} from 'next/font/google';
 
+import {SITE_URL} from '@/lib/site';
 import './globals.css';
 
 /** Headings (h1/h2/h3) and the "Kat B." wordmark. */
@@ -19,8 +20,7 @@ const body = DM_Sans({
 
 
 export const metadata: Metadata = {
-  // TODO: Replace with the production domain once known
-  metadataBase: new URL('https://yourdomain.com'),
+  metadataBase: new URL(SITE_URL),
   title: 'Kat B. | Private Tour Guide in Playa del Carmen, Mexico',
   description:
     "Private tours in Playa del Carmen, Tulum, Cobá & the Riviera Maya. Cenotes, Mayan ruins, jungle adventures. English, Spanish & Russian-speaking guide."

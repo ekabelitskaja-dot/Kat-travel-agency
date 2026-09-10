@@ -10,7 +10,7 @@ export function TourCard({tour}: {tour: Tour}) {
   return (
     <article className="group overflow-hidden rounded-3xl border border-text/10 bg-white shadow-[0_16px_40px_rgba(28,28,26,0.10)] flex flex-col">
       <Link href={`/tours/${tour.slug}`} className="flex flex-col flex-1">
-        <div className="relative h-40">
+        <div className="relative aspect-[4/3]">
           <Image
             src={tour.image.src}
             alt={tour.image.alt}
@@ -30,7 +30,6 @@ export function TourCard({tour}: {tour: Tour}) {
 
         <div className="flex flex-col p-6 flex-1">
           <h3 className="text-xl leading-tight">{tour.name}</h3>
-          <p className="mt-2 text-sm leading-6 text-text-muted">{tour.tagline}</p>
 
           <div className="mt-5 flex items-center gap-4 text-sm text-text-muted">
             <span className="flex items-center gap-1">

@@ -10,7 +10,7 @@
     "bookNow": "Reservar un Tour"
   },
   "hero": {
-    "headline": "Tu Guía Privada al México Real",
+    "headline": "Ven con curiosidad\nVete con historias",
     "accentWord": "Privada",
     "subheadline": "Cenotes, ruinas mayas y aventuras en la selva - explorados en privado, a tu manera, con Kat",
     "cta": {
@@ -18,24 +18,6 @@
       "whatsapp": "Escríbeme por WhatsApp"
     },
     "scroll": "Explorar"
-  },
-  "trust": {
-    "rating": {
-      "title": "Calificación 5.0",
-      "subtitle": "Verificado en ToursByLocals"
-    },
-    "languages": {
-      "title": "3 Idiomas",
-      "subtitle": "Inglés · Español · Ruso"
-    },
-    "private": {
-      "title": "Solo Grupos Privados",
-      "subtitle": "Tu grupo, sin extraños"
-    },
-    "based": {
-      "title": "Playa del Carmen",
-      "subtitle": "Riviera Maya, México"
-    }
   },
   "whyKat": {
     "eyebrow": "¿Por Qué Viajar con Kat?",
@@ -194,12 +176,12 @@
     "included": "Qué Está Incluido",
     "important": "Información Importante",
     "highlights": "Puntos Destacados",
-    "notIncluded": "No Incluido",
     "gallery": "Galería",
     "transportIncluded": "El transporte desde/hacia tu hotel siempre está incluido (Playa del Carmen, Tulum, Puerto Aventuras, Akumal).",
     "transportLabel": "Transporte",
     "transportValue": "Transporte desde y hacia tu hotel incluido",
     "bookThis": "Reservar Este Tour",
+    "talkToKat": "Habla con Kat",
     "askWhatsapp": "Hacer una Pregunta (WhatsApp)",
     "related": "Otros Tours Que Te Pueden Gustar"
   },

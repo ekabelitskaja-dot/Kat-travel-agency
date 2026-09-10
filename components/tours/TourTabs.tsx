@@ -4,6 +4,8 @@ import {useMemo, useState} from 'react';
 import {useTranslations} from 'next-intl';
 
 import type {Tour} from '@/data/tours';
+import {BookTourButton} from '@/components/shared/BookTourButton';
+import {TourStory} from '@/components/tours/TourStory';
 
 type TabKey = 'overview' | 'included' | 'important';
 
@@ -49,12 +51,11 @@ export function TourTabs({tour}: {tour: Tour}) {
       {active === 'overview' && (
         <div className="mt-8">
           {tour.description && (
-            <div className="mb-8 grid gap-5">
-              {[tour.tagline, ...tour.description.split('\n\n')].map((para, i) => (
-                <p key={i} className="text-base leading-7 text-text-muted">{para}</p>
-              ))}
-            </div>
+            <TourStory tagline={tour.tagline} description={tour.description} />
           )}
+          <div className="mb-8">
+            <BookTourButton label={t('tourDetail.talkToKat')} tourName={tour.name} />
+          </div>
           <h3 className="text-xl">{t('tourDetail.highlights')}</h3>
           <ul className="mt-4 grid gap-2 text-sm text-text-muted">
             {tour.highlights.map((h) => (
@@ -68,29 +69,24 @@ export function TourTabs({tour}: {tour: Tour}) {
       )}
 
       {active === 'included' && (
-        <div className="mt-8 grid gap-8 md:grid-cols-2">
-          <div className="rounded-3xl border border-text/10 bg-white/65 backdrop-blur-sm p-7">
-            <h3 className="text-xl">{t('tourDetail.included')}</h3>
-            <ul className="mt-4 grid gap-2 text-sm text-text-muted">
-              {tour.included.map((x) => (
-                <li key={x} className="flex gap-3">
+        <div className="mt-8 rounded-3xl border border-text/10 bg-white/65 backdrop-blur-sm p-7">
+          <ul className="grid gap-4 text-sm text-text-muted">
+            {tour.included.map((x) => {
+              const title = typeof x === 'string' ? x : x.title;
+              const description = typeof x === 'string' ? undefined : x.description;
+              return (
+                <li key={title} className="flex gap-3">
                   <span className="mt-2 h-1.5 w-1.5 rounded-full bg-accent shrink-0" />
-                  <span>{x}</span>
+                  <span>
+                    <span className="block font-medium text-text">{title}</span>
+                    {description ? (
+                      <span className="mt-1 block leading-6">{description}</span>
+                    ) : null}
+                  </span>
                 </li>
-              ))}
-            </ul>
-          </div>
-          <div className="rounded-3xl border border-text/10 bg-white/65 backdrop-blur-sm p-7">
-            <h3 className="text-xl">{t('tourDetail.notIncluded')}</h3>
-            <ul className="mt-4 grid gap-2 text-sm text-text-muted">
-              {tour.notIncluded.map((x) => (
-                <li key={x} className="flex gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 rounded-full bg-text-muted shrink-0" />
-                  <span>{x}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+              );
+            })}
+          </ul>
         </div>
       )}
 

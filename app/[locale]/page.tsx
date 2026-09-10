@@ -4,6 +4,8 @@ import {WhyKat} from '@/components/home/WhyKat';
 import {FeaturedTours} from '@/components/home/FeaturedTours';
 import {FinalCTA} from '@/components/home/FinalCTA';
 import {Gallery} from '@/components/home/Gallery';
+import {JsonLd} from '@/components/seo/JsonLd';
+import {graphSchema} from '@/lib/schema';
 
 
 export const metadata = {
@@ -28,6 +30,7 @@ export const metadata = {
 export default function HomePage() {
   return (
     <>
+      <JsonLd data={graphSchema([])} />
       <Hero />
       <section id="reviews"><ReviewsSlider /></section>
       <section id="tours"><FeaturedTours /></section>

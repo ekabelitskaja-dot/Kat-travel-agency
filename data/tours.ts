@@ -15,8 +15,7 @@ export type Tour = {
   price: number;
   categories: TourCategory[];
   highlights: string[];
-  included: string[];
-  notIncluded: string[];
+  included: Array<string | {title: string; description: string}>;
   image: {
     src: string;
     alt: string;
@@ -51,7 +50,7 @@ export const tours: Tour[] = [
     slug: 'half-day-snorkeling-adventure',
     name: 'Snorkeling Adventure',
     tagline: 'Two very different worlds. One unforgettable morning.',
-    description: 'What if you could swim with green sea turtles in the Caribbean and then trade the salty sea for a crystal-clear cenote in the Maya jungle, all before lunch?\n\nJoin me for this exciting snorkeling adventure that\'s perfect for all ages!\n\nWe\'ll start our morning bright and early, aiming to be among the first visitors at Turtle Bay, avoiding the crowds and the midday heat. The sea is usually calmer in the morning, giving us some of the best conditions for swimming and snorkeling.\n\nFirst-time snorkeler? No problem! I\'ll share all the tips and tricks you need to feel comfortable and relaxed in the water and actually enjoy this unique experience.\n\nWe\'ll swim out from the beach in search of majestic green sea turtles in their natural habitat. You\'ll get to swim alongside one of the most ancient creatures on our planet! And if we\'re lucky, we might even catch them enjoying their breakfast!\n\nI\'ll share all the interesting facts about these magnificent creatures, as well as some of the ways you can actively contribute to the conservation and protection of sea turtles.\n\nAfter swimming in the salty waters of the Caribbean Sea, we\'ll head into the Maya jungle, where we\'ll swap the sea for the cool, crystal-clear waters of a cenote. You\'ll have a chance to swim and snorkel, enjoy the jungle around you, and, of course, I\'ll tell you stories about why cenotes were so important to the Maya and why they are such a special part of this region.\n\nTwo completely different environments, one morning, and plenty to discover along the way.\n\nReady to come explore with me?',
+    description: 'What if you could swim with **green sea turtles** in the Caribbean and then trade the salty sea for a **crystal-clear cenote** in the Maya jungle, all before lunch?\n\nJoin me for this exciting snorkeling adventure that\'s perfect for **all ages!**\n\nFIRST STOP: TURTLE BAY\n\nWe\'ll start our morning bright and early, aiming to be among the first visitors at Turtle Bay, avoiding the crowds and the midday heat. The sea is usually calmer in the morning, giving us some of the best conditions for swimming and snorkeling.\n\n**First-time snorkeler? No problem!** I\'ll share all the tips and tricks you need to feel comfortable and relaxed in the water and actually **enjoy** this unique experience.\n\nWe\'ll swim out from the beach in search of majestic green sea turtles in their **natural habitat**. You\'ll get to swim alongside one of the most ancient creatures on our planet! And if we\'re lucky, we might even catch them enjoying their breakfast!\n\nI\'ll share all the interesting facts about these magnificent creatures, as well as some of the ways you can actively contribute to the **conservation and protection** of sea turtles.\n\nTHEN, INTO THE MAYA JUNGLE\n\nAfter swimming in the salty waters of the Caribbean Sea, we\'ll head into the Maya jungle, where we\'ll swap the sea for the cool, crystal-clear waters of a cenote. You\'ll have a chance to **swim and snorkel**, enjoy the jungle around you, and, of course, I\'ll tell you stories about why cenotes were so important to the Maya and why they are such a special part of this region.\n\nTwo completely different environments, one morning, and plenty to discover along the way.\n\n**Ready to come explore with me?**',
     duration: '5 hours',
     groupSize: 'Up to 10',
     price: 562,
@@ -63,8 +62,32 @@ export const tours: Tour[] = [
       'All snorkel gear provided, nothing to rent or carry',
       'Hotel pickup and drop-off included'
     ],
-    included: ['Private transport', 'Snorkel gear', 'Life jackets', 'Guide', 'All entrance fees'],
-    notIncluded: ['Meals', 'Gratuity'],
+    included: [
+      {
+        title: 'Your private, air-conditioned transportation',
+        description: 'Comfortable transportation throughout the day.'
+      },
+      {
+        title: 'Your private guide, of course',
+        description: "That would be me. I'll be with you throughout the experience."
+      },
+      {
+        title: 'Water and snacks',
+        description: "Because exploring is better when you're properly fueled."
+      },
+      {
+        title: 'All entrance fees',
+        description: 'Everything covered, so there are no surprises along the way.'
+      },
+      {
+        title: 'Hand-washed snorkeling equipment',
+        description: 'I personally wash and prepare all the snorkeling equipment before your adventure.'
+      },
+      {
+        title: 'Life jackets',
+        description: 'For comfort and an extra bit of support in the water.'
+      }
+    ],
     video: {
       src: '/videos/snorkeling/akumal-sea-turtle.mp4',
       poster: '/photos/snorkeling/green-sea-turtle-akumal.jpg'
@@ -155,7 +178,6 @@ export const tours: Tour[] = [
       'Everything included - transport, fees, gear'
     ],
     included: ['Private transport', 'All entrance fees', 'Zip line', 'Guide'],
-    notIncluded: ['Meals', 'Gratuity'],
     video: {
       src: '/videos/coba/monkey-watching-riviera-maya.mp4',
       poster: '/photos/coba/monkey-watching-riviera-maya.jpg'
@@ -235,7 +257,6 @@ export const tours: Tour[] = [
       'All entrance fees included'
     ],
     included: ['Private transport', 'Entrance fees', 'Guide', 'All fees'],
-    notIncluded: ['Meals', 'Gratuity'],
     video: {
       src: '/videos/tulum/cave-cenote-riviera-maya.mp4',
       poster: '/photos/tulum/tulum-ruins-riviera-maya.jpg'
@@ -321,7 +342,6 @@ export const tours: Tour[] = [
       'Private transport included'
     ],
     included: ['Private transport', 'Entrance fees', 'Snorkel gear', 'Guide'],
-    notIncluded: ['Meals', 'Gratuity'],
     video: {
       src: '/videos/jungle-play/canoe-cenote-riviera-maya-1.mp4',
       poster: '/photos/jungle-play/ziplining-riviera-maya-mexico.jpg'
@@ -396,7 +416,6 @@ export const tours: Tour[] = [
       'Hotel pickup and drop-off included'
     ],
     included: ['Private transport', 'All equipment', 'Safety gear', 'Guide', 'All fees'],
-    notIncluded: ['Meals', 'Gratuity'],
     video: {
       src: '/videos/underworld/gx011005.mp4',
       poster: '/photos/underworld/admiring-the-cave.jpg'

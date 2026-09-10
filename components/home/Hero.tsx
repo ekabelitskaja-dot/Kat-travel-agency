@@ -6,6 +6,7 @@ import {useTranslations} from 'next-intl';
 import {motion, AnimatePresence, useReducedMotion} from 'framer-motion';
 
 import {Button} from '@/components/shared/Button';
+import {Link} from '@/i18n/navigation';
 
 const SLIDES = [
   {
@@ -31,6 +32,7 @@ const SLIDES = [
 ];
 
 const INTERVAL = 5000;
+const BUTTON_GRADIENT = 'linear-gradient(100deg, #00D4FF -8.86%, #2EE0B4 104.42%)';
 
 export function Hero() {
   const t = useTranslations();
@@ -46,7 +48,7 @@ export function Hero() {
   }, [reduced]);
 
   const headline = t('hero.headline');
-  const words = headline.split(' ');
+  const lines = headline.split('\n');
 
   return (
     <section className="relative h-[78vh] min-h-[520px] overflow-hidden">
@@ -82,58 +84,99 @@ export function Hero() {
       />
 
       {/* Content */}
-      <div className="relative flex h-full flex-col items-center justify-center px-6 text-center" style={{paddingTop: '30px'}}>
-        {/* Headline */}
-        <motion.h1
-          className="text-[45px] md:text-[80px] text-white max-w-4xl"
-          style={{lineHeight: 1.15, textShadow: '0 2px 24px rgba(0,0,0,0.3)'}}
-          initial="hidden"
-          animate="show"
-          variants={{
-            hidden: {},
-            show: {transition: {staggerChildren: 0.06, delayChildren: 0.1}}
-          }}
-        >
-          {words.map((w, i) => (
-            <motion.span
-              key={`${w}-${i}`}
-              className="inline-block mr-[0.25em]"
-              variants={{
-                hidden: reduced ? {opacity: 1} : {opacity: 0, y: 20},
-                show: {opacity: 1, y: 0}
-              }}
-              transition={{duration: 0.7, ease: [0.22, 1, 0.36, 1]}}
-            >
-              {w}
-            </motion.span>
-          ))}
-        </motion.h1>
+      <div className="relative flex h-full flex-col items-center justify-center px-6">
+        <div className="flex w-full max-w-4xl flex-col items-center text-center">
+          {/* Headline */}
+          <motion.h1
+            className="flex w-full flex-col items-center text-[46px] font-medium uppercase tracking-[0.08em] text-white md:text-[82px]"
+            style={{lineHeight: 1.1, textShadow: '0 3px 24px rgba(0,0,0,0.4)'}}
+            initial="hidden"
+            animate="show"
+            variants={{
+              hidden: {},
+              show: {transition: {staggerChildren: 0.06, delayChildren: 0.1}}
+            }}
+          >
+            {lines.map((line, lineIndex) => {
+              const words = line.split(' ').filter(Boolean);
+              const isFirst = lineIndex === 0;
+              const isPayoff = lineIndex === lines.length - 1 && lines.length > 1;
+              return (
+                <span
+                  key={lineIndex}
+                  className={
+                    isFirst
+                      ? 'inline-flex flex-col items-stretch'
+                      : 'mt-3 block md:mt-4'
+                  }
+                >
+                  <span
+                    className="block"
+                    style={
+                      isPayoff
+                        ? {
+                            background: BUTTON_GRADIENT,
+                            WebkitBackgroundClip: 'text',
+                            backgroundClip: 'text',
+                            color: 'transparent',
+                            WebkitTextFillColor: 'transparent',
+                            filter: 'drop-shadow(0 3px 18px rgba(0,0,0,0.4))'
+                          }
+                        : undefined
+                    }
+                  >
+                    {words.map((w, i) => (
+                      <motion.span
+                        key={`${lineIndex}-${w}-${i}`}
+                        className={['inline-block', i < words.length - 1 ? 'mr-[0.25em]' : ''].join(' ')}
+                        variants={{
+                          hidden: reduced ? {opacity: 1} : {opacity: 0, y: 20},
+                          show: {opacity: 1, y: 0}
+                        }}
+                        transition={{duration: 0.7, ease: [0.22, 1, 0.36, 1]}}
+                      >
+                        {w}
+                      </motion.span>
+                    ))}
+                  </span>
+                  {isFirst && lines.length > 1 ? (
+                    <span
+                      className="mt-3 h-px w-full md:mt-4"
+                      style={{background: 'rgba(255,255,255,0.7)'}}
+                      aria-hidden="true"
+                    />
+                  ) : null}
+                </span>
+              );
+            })}
+          </motion.h1>
 
-        {/* Subheadline */}
-        <motion.p
-          className="mt-5 max-w-xl text-base leading-7 md:text-lg"
-          style={{color: '#ffffff', textShadow: '0 1px 12px rgba(0,0,0,0.4)'}}
-          initial={reduced ? {opacity: 1} : {opacity: 0, y: 10}}
-          animate={{opacity: 1, y: 0}}
-          transition={{delay: 0.4, duration: 0.6}}
-        >
-          {t('hero.subheadline')}
-        </motion.p>
+          {/* Subheadline */}
+          <motion.p
+            className="mt-7 w-full max-w-2xl whitespace-pre-line text-center text-lg font-medium leading-8 tracking-[0.02em] md:mt-8 md:text-xl md:leading-9"
+            style={{color: '#ffffff', textShadow: '0 2px 18px rgba(0,0,0,0.55)'}}
+            initial={reduced ? {opacity: 1} : {opacity: 0, y: 10}}
+            animate={{opacity: 1, y: 0}}
+            transition={{delay: 0.4, duration: 0.6}}
+          >
+            {t('hero.subheadline')}
+          </motion.p>
 
-        {/* CTA */}
-        <motion.div
-          className="mt-8"
-          initial={reduced ? {opacity: 1} : {opacity: 0, y: 10}}
-          animate={{opacity: 1, y: 0}}
-          transition={{delay: 0.55, duration: 0.6}}
-        >
-          <a href="#tours">
-            <Button size="lg">{t('hero.cta.book')}</Button>
-          </a>
-        </motion.div>
+          {/* CTA */}
+          <motion.div
+            className="mt-8 flex w-full justify-center"
+            initial={reduced ? {opacity: 1} : {opacity: 0, y: 10}}
+            animate={{opacity: 1, y: 0}}
+            transition={{delay: 0.55, duration: 0.6}}
+          >
+            <Link href="/tours">
+              <Button size="lg">{t('hero.cta.book')}</Button>
+            </Link>
+          </motion.div>
+        </div>
 
         {/* Slide indicators */}
-        <div className="absolute bottom-6 flex gap-2" aria-hidden="true">
+        <div className="absolute bottom-6 left-1/2 flex -translate-x-1/2 gap-2" aria-hidden="true">
           {SLIDES.map((_, i) => (
             <button
               key={i}

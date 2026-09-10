@@ -117,8 +117,8 @@ export function TourDetail({
         {related.length > 0 && (
           <div className="mt-20">
             <h2 className="text-2xl md:text-3xl">{t('tourDetail.related')}</h2>
-            <div className="mt-8 grid gap-6 md:grid-cols-3">
-              {related.slice(0, 3).map((r) => (
+            <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {related.map((r) => (
                 <TourCard key={r.slug} tour={r} />
               ))}
             </div>
