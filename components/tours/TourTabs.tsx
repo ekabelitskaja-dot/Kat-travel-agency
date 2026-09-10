@@ -4,6 +4,7 @@ import {useMemo, useState} from 'react';
 import {useTranslations} from 'next-intl';
 
 import type {Tour} from '@/data/tours';
+import {emphasizeKeywords} from '@/components/shared/highlighted-text';
 
 type TabKey = 'overview' | 'included' | 'important';
 
@@ -50,8 +51,13 @@ export function TourTabs({tour}: {tour: Tour}) {
         <div className="mt-8">
           {tour.description && (
             <div className="mb-8 grid gap-5">
-              {[tour.tagline, ...tour.description.split('\n\n')].map((para, i) => (
-                <p key={i} className="text-base leading-7 text-text-muted">{para}</p>
+              <p className="text-xl leading-8 text-text md:text-2xl md:leading-9">
+                {emphasizeKeywords(tour.tagline)}
+              </p>
+              {tour.description.split('\n\n').map((para, i) => (
+                <p key={i} className="text-base leading-7 text-text-muted">
+                  {emphasizeKeywords(para)}
+                </p>
               ))}
             </div>
           )}

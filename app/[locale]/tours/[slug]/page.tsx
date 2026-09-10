@@ -2,6 +2,7 @@ import {notFound} from 'next/navigation';
 
 import {tours, getTourBySlug} from '@/data/tours';
 import {TourDetail} from '@/components/tours/TourDetail';
+import {stripEmphasis} from '@/components/shared/highlighted-text';
 
 export function generateStaticParams() {
   return tours.map((t) => ({slug: t.slug}));
@@ -12,7 +13,7 @@ export async function generateMetadata({params}: {params: {slug: string}}) {
   if (!tour) return {};
   return {
     title: `${tour.name} | Kat B. Private Tours`,
-    description: tour.tagline
+    description: stripEmphasis(tour.tagline)
   };
 }
 
