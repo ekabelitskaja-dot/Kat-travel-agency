@@ -13,10 +13,12 @@ type GalleryItem = Tour['gallery'][number];
 
 function GalleryTile({
   img,
-  className
+  className,
+  videoFit
 }: {
   img: GalleryItem;
   className?: string;
+  videoFit?: 'cover' | 'native' | 'nativeUntilSm';
 }) {
   return (
     <div
@@ -31,6 +33,7 @@ function GalleryTile({
           poster={img.src}
           alt={img.alt}
           objectPosition={img.objectPosition}
+          fit={videoFit}
         />
       ) : (
         <Image
@@ -58,7 +61,8 @@ function TourGallery({tour}: {tour: Tour}) {
         {topB ? <GalleryTile img={topB} /> : null}
         <GalleryTile
           img={video}
-          className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-text/10 sm:aspect-auto sm:row-span-2 sm:h-full sm:min-h-0"
+          videoFit="nativeUntilSm"
+          className="relative overflow-hidden rounded-3xl border border-text/10 sm:row-span-2 sm:h-full sm:min-h-0"
         />
         {rightA ? <GalleryTile img={rightA} /> : null}
         {rightB ? <GalleryTile img={rightB} /> : null}

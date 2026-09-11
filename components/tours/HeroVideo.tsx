@@ -13,7 +13,7 @@ type Props = {
   /** Only the hero should preload eagerly; gallery tiles sit below the fold. */
   priority?: boolean;
   /** `cover` fills a cropped frame. `native` keeps the video's own aspect ratio. */
-  fit?: 'cover' | 'native';
+  fit?: 'cover' | 'native' | 'nativeUntilSm';
 };
 
 /**
@@ -34,6 +34,12 @@ export function HeroVideo({
   const reduced = useReducedMotion();
   const ref = useRef<HTMLVideoElement>(null);
   const native = fit === 'native';
+  const nativeUntilSm = fit === 'nativeUntilSm';
+  const videoClassName = native
+    ? 'h-auto w-full'
+    : nativeUntilSm
+      ? 'h-auto w-full sm:absolute sm:inset-0 sm:h-full sm:w-full sm:object-cover'
+      : 'absolute inset-0 h-full w-full object-cover';
 
   useEffect(() => {
     const el = ref.current;
@@ -56,6 +62,20 @@ export function HeroVideo({
         />
       );
     }
+    if (nativeUntilSm) {
+      return (
+        <Image
+          src={poster}
+          alt={alt}
+          width={1920}
+          height={1080}
+          priority={priority}
+          className="h-auto w-full sm:absolute sm:inset-0 sm:h-full sm:w-full sm:object-cover"
+          style={{objectPosition}}
+          sizes="(max-width: 768px) 100vw, 50vw"
+        />
+      );
+    }
     return (
       <Image
         src={poster}
@@ -72,7 +92,7 @@ export function HeroVideo({
   return (
     <video
       ref={ref}
-      className={native ? 'h-auto w-full' : 'absolute inset-0 h-full w-full object-cover'}
+      className={videoClassName}
       style={native ? undefined : {objectPosition}}
       src={src}
       poster={poster}
