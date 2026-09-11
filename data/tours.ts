@@ -165,7 +165,7 @@ export const tours: Tour[] = [
     slug: 'monkey-sanctuary-coba-ruins',
     name: 'Jungle Expedition',
     tagline: 'Ready to trade the beach for the jungle?',
-    description: 'Come with me into the Maya jungle, where local communities, wildlife, ancient traditions, and a little adventure are waiting.\n\nDuring our expedition, we\'ll visit a nature reserve run by local Maya families, where the experience starts with a traditional purification ceremony held by a local shaman. After this, we\'ll venture into the jungle in search of spider monkeys and howler monkeys that live freely in this protected area.\n\nAnd yes, finding monkeys in the jungle requires a little patience, a good eye, and a bit of luck. They are wild animals, after all, and they definitely did not check our itinerary before coming to work.\n\nAfter our serene walk through the jungle, we\'ll pick up the pace with an exciting zip line ride before slowing things down again with a relaxing canoe ride across the calm waters of the beautiful lagoon. Take in the beauty around you and enjoy the freshness of the water.\n\nNext, we\'ll head underground!\n\nWe\'ll rappel into a magnificent cave cenote, where you can cool off in the refreshing water and experience the mystical beauty of the Maya underworld. I\'ll share the story behind how these cenotes were formed and why they continue to hold such an important place in Maya culture.\n\nWe\'ll also explore the ancient Maya city of Coba, where you can walk, ride a bicycle, or take a pedicab through the jungle while discovering the archaeological remains of this once-thriving city.\n\nAs we explore, I\'ll share stories about the Maya civilization, from fascinating facts to the theories and mysteries that still surround this ancient culture. If you\'re a history enthusiast, bring your favorite documentary, book, or theory. I\'d love to hear what you think.\n\nMaya history, living traditions, jungle wildlife, adventure, and the magical world beneath the Yucatan Peninsula.\n\nIf that sounds like your kind of adventure, let\'s talk.',
+    description: 'Come with me into the Maya jungle, where **local communities**, **wildlife**, **ancient traditions**, and a little adventure are waiting.\n\nDuring our expedition, we\'ll visit a nature reserve run by local Maya families, where the experience starts with a **traditional purification ceremony** held by a local shaman. After this, we\'ll venture into the jungle in search of **spider monkeys and howler monkeys** that live freely in this protected area.\n\nAnd yes, finding monkeys in the jungle requires a little patience, a good eye, and a bit of luck. They are **wild animals**, after all, and they definitely did not check our itinerary before coming to work.\n\nAfter our serene walk through the jungle, we\'ll pick up the pace with an exciting **zip line ride** before slowing things down again with a relaxing **canoe ride** across the calm waters of the beautiful lagoon. Take in the beauty around you and enjoy the freshness of the water.\n\nNext, we\'ll head underground!\n\nWe\'ll rappel into a magnificent **cave cenote**, where you can cool off in the refreshing water and experience the mystical beauty of the **Maya underworld**. I\'ll share the story behind how these cenotes were formed and why they continue to hold such an important place in Maya culture.\n\nWe\'ll also explore the ancient Maya city of Coba, where you can **walk, ride a bicycle, or take a pedicab** through the jungle while discovering the archaeological remains of this once-thriving city.\n\nAs we explore, I\'ll share stories about the Maya civilization, from fascinating facts to the theories and mysteries that still surround this ancient culture. If you\'re a **history enthusiast**, bring your favorite documentary, book, or theory. I\'d love to hear what you think.\n\nMaya history, living traditions, jungle wildlife, adventure, and the magical world beneath the Yucatan Peninsula.\n\n**If that sounds like your kind of adventure, let\'s talk.**',
     duration: '8 hours',
     groupSize: 'Up to 10',
     price: 637,
@@ -177,7 +177,28 @@ export const tours: Tour[] = [
       'Cool off with a cenote swim at the end of the day',
       'Everything included - transport, fees, gear'
     ],
-    included: ['Private transport', 'All entrance fees', 'Zip line', 'Guide'],
+    included: [
+      {
+        title: 'Your private, air-conditioned transportation',
+        description: 'Comfortable transportation throughout the day.'
+      },
+      {
+        title: 'Your private guide, of course',
+        description: "That would be me. I'll be with you throughout the experience."
+      },
+      {
+        title: 'Water and snacks',
+        description: "Because exploring is better when you're properly fueled."
+      },
+      {
+        title: 'All entrance fees',
+        description: 'Everything covered, so there are no surprises along the way.'
+      },
+      {
+        title: 'Life jackets',
+        description: 'For the rappel into the cenote, and a little extra support in the water.'
+      }
+    ],
     video: {
       src: '/videos/coba/monkey-watching-riviera-maya.mp4',
       poster: '/photos/coba/monkey-watching-riviera-maya.jpg'
@@ -243,8 +264,8 @@ export const tours: Tour[] = [
   {
     slug: 'tulum-cenote-half-day',
     name: 'Tulum Cenote',
-    tagline: 'Tulum is where Maya history meets the Caribbean. Cenotes take us into the Maya underworld, hidden beneath the jungle in a world of crystal-clear water, ancient beliefs, and a little mystery.',
-    description: 'We\'ll start our day early, heading to Tulum before the crowds and the midday heat arrive. Perched dramatically above the Caribbean, Tulum is one of the most picturesque Maya archaeological sites in the region. But there\'s much more to it than a beautiful view. As we wander through the ancient city, I\'ll share the stories, mysteries, and fascinating details that bring this remarkable place to life.\n\nFrom the ancient city, we\'ll venture into the Maya jungle to discover one of the region\'s beautiful freshwater cenotes. For the Maya, these natural pools are much more than places to find fresh water. They are sacred places, deeply connected to their beliefs and their relationship with the natural world. Cenotes remain an essential part of the landscape and culture of the Yucatan Peninsula.\n\nNow comes the refreshing part! We\'ll explore the cenote from the inside, swimming and snorkeling through its crystal-clear waters. I\'ll make sure everyone knows what to do with the snorkeling equipment and feels ready to explore, whether you\'re a pro snorkeler or this is your first time exploring beneath the surface.\n\nIt\'s a morning filled with ancient history, jungle landscapes, Caribbean views, and underwater exploration. You\'ll be back at your hotel around lunchtime, with the rest of the day completely yours. Perhaps a lazy afternoon on the beach sounds about right?\n\nReady to discover Tulum from a different perspective?',
+    tagline: 'Where Maya history meets the Caribbean and descends into the mysterious underworld.',
+    description: 'We\'ll start our day early, heading to Tulum **before the crowds** and the midday heat arrive. Perched dramatically above the Caribbean, Tulum is one of the most **picturesque Maya archaeological sites** in the region. But there\'s much more to it than a beautiful view. As we wander through the ancient city, I\'ll share the **stories and mysteries** that bring this remarkable place to life.\n\nFrom the ancient city, we\'ll venture into the Maya jungle to discover one of the region\'s beautiful **freshwater cenotes**. For the Maya, these natural pools are much more than places to find fresh water. They are **sacred places**, deeply connected to their beliefs and their relationship with the natural world. Cenotes remain an essential part of the landscape and culture of the Yucatan Peninsula.\n\nNow comes the refreshing part! We\'ll explore the cenote from the inside, **swimming and snorkeling** through its **crystal-clear waters**. I\'ll make sure everyone knows what to do with the snorkeling equipment and feels ready to explore, whether you\'re a pro snorkeler or this is your **first time** exploring beneath the surface.\n\nIt\'s a morning filled with **ancient history**, jungle landscapes, Caribbean views, and underwater exploration. You\'ll be back at your hotel around lunchtime, with the rest of the day completely yours. Perhaps a lazy afternoon on the beach sounds about right?\n\n**Ready to discover Tulum from a different perspective?**',
     duration: '6 hours',
     groupSize: 'Up to 10',
     price: 556,
@@ -256,7 +277,32 @@ export const tours: Tour[] = [
       'Private transport door-to-door',
       'All entrance fees included'
     ],
-    included: ['Private transport', 'Entrance fees', 'Guide', 'All fees'],
+    included: [
+      {
+        title: 'Your private, air-conditioned transportation',
+        description: 'Comfortable transportation throughout the day.'
+      },
+      {
+        title: 'Your private guide, of course',
+        description: "That would be me. I'll be with you throughout the experience."
+      },
+      {
+        title: 'Water and snacks',
+        description: "Because exploring is better when you're properly fueled."
+      },
+      {
+        title: 'All entrance fees',
+        description: 'Everything covered, so there are no surprises along the way.'
+      },
+      {
+        title: 'Hand-washed snorkeling equipment',
+        description: 'I personally wash and prepare all the snorkeling equipment before your adventure.'
+      },
+      {
+        title: 'Life jackets',
+        description: 'For comfort and an extra bit of support in the water.'
+      }
+    ],
     video: {
       src: '/videos/tulum/cave-cenote-riviera-maya.mp4',
       poster: '/photos/tulum/tulum-ruins-riviera-maya.jpg'
@@ -327,9 +373,9 @@ export const tours: Tour[] = [
   },
   {
     slug: 'three-cenotes-half-day',
-    name: 'Jungle Play Day',
+    name: 'Jungle Adventure',
     tagline: 'What happens when the jungle becomes your playground?',
-    description: 'Get ready for a day filled with adventure, crystal-clear cenotes, and a glimpse into modern Maya life.\n\nFollow me on an exhilarating zip line ride over the water, then slow things down with a tranquil canoe journey through one of the area\'s largest open-air cenotes. We\'ll take in the jungle from the water before heading to another breathtaking cenote, where you can swim in its crystal-clear waters and, if you\'re feeling brave, take the plunge with a cliff jump!\n\nBut this experience is about more than adventure.\n\nAs we explore the area, I\'ll share stories about modern Maya life, the community, and some of the traditions that are still part of everyday life today. We\'ll see local homes and visit a small community shop where handmade souvenirs are produced locally.\n\nAfter all that adventure, we\'ll sit down for a traditional lunch prepared by the locals, with the kind of homemade food that makes you very happy you worked up an appetite.\n\nIt\'s a morning that brings together adventure, nature, culture, and great local food, with a chance to experience a side of the Riviera Maya that goes beyond the beach and the resorts.\n\nSounds like your kind of day? Let\'s talk.',
+    description: 'Get ready for a day filled with adventure, **crystal-clear cenotes**, and a glimpse into **modern Maya life**.\n\nFollow me on an exhilarating **zip line ride** over the water, then slow things down with a tranquil **canoe journey** through one of the area\'s largest **open-air cenotes**. We\'ll take in the jungle from the water before heading to another breathtaking cenote, where you can swim in its crystal-clear waters and, if you\'re feeling brave, take the plunge with a **cliff jump**!\n\nBut this experience is about more than adventure.\n\nAs we explore the area, I\'ll share stories about modern Maya life, the community, and some of the traditions that are still part of everyday life today. We\'ll see **local homes** and visit a small community shop where **handmade souvenirs** are produced locally.\n\nAfter all that adventure, we\'ll sit down for a **traditional lunch** prepared by the locals, with the kind of homemade food that makes you very happy you worked up an appetite.\n\nIt\'s a morning that brings together adventure, nature, culture, and great local food, with a chance to experience a side of the Riviera Maya that goes beyond the beach and the resorts.\n\n**Sounds like your kind of day? Let\'s talk.**',
     duration: '4.5 hours',
     groupSize: 'Up to 10',
     price: 594,
@@ -341,7 +387,32 @@ export const tours: Tour[] = [
       'All gear provided',
       'Private transport included'
     ],
-    included: ['Private transport', 'Entrance fees', 'Snorkel gear', 'Guide'],
+    included: [
+      {
+        title: 'Your private, air-conditioned transportation',
+        description: 'Comfortable transportation throughout the day.'
+      },
+      {
+        title: 'Your private guide, of course',
+        description: "That would be me. I'll be with you throughout the experience."
+      },
+      {
+        title: 'Water and snacks',
+        description: "Because exploring is better when you're properly fueled."
+      },
+      {
+        title: 'All entrance fees',
+        description: 'Everything covered, so there are no surprises along the way.'
+      },
+      {
+        title: 'Life jackets',
+        description: 'For comfort and an extra bit of support in the water.'
+      },
+      {
+        title: 'Traditional lunch',
+        description: 'Delicious lunch prepared by the locals.'
+      }
+    ],
     video: {
       src: '/videos/jungle-play/canoe-cenote-riviera-maya-1.mp4',
       poster: '/photos/jungle-play/ziplining-riviera-maya-mexico.jpg'
@@ -403,7 +474,7 @@ export const tours: Tour[] = [
     slug: 'half-day-jungle-adventure',
     name: 'Coba & The Maya Underworld',
     tagline: 'Step into the mystical world of the ancient Maya, then descend into the underworld for a very different kind of adventure.',
-    description: 'Our journey takes us to Coba, an ancient Maya city hidden deep in the jungle. Here, we\'ll discover the ruins walking, riding a bicycle, or in a Maya limousine! You choose how you\'d like to explore, while I share with you the stories, beliefs, and mysteries that make this place feel so different from the better-known Maya sites.\n\nOnce we\'ve explored the ancient city, we\'ll leave it behind and head underground to visit a local cenote.\n\nIn the Maya worldview, cenotes are sacred places connected to Xibalba, the underworld, and they continue to hold deep spiritual and cultural significance for Maya communities today. These extraordinary natural formations, with their crystal-clear waters and mysterious underground atmosphere, offer us a chance to experience something truly unique. And if you\'re feeling brave, there\'s even the option for a cliff jump!\n\nAnd if all that exploring makes you hungry and you don\'t want to ride back on an empty stomach, I\'ll be happy to recommend my favorite local restaurants and the most traditional dishes according to your dietary preferences. You pay for what you choose, with no fixed menu or package price. Your vacation, your appetite, your choice.\n\nIt\'s a day of ancient mysteries, jungle exploration, sacred waters, and a little local flavor along the way.\n\nReady to discover the Maya world with me?',
+    description: 'Our journey takes us to Coba, an **ancient Maya city** hidden deep in the jungle. Here, we\'ll discover the ruins **walking, riding a bicycle, or in a Maya limousine!** You choose how you\'d like to explore, while I share with you the **stories, beliefs, and mysteries** that make this place feel so different from the better-known Maya sites.\n\nOnce we\'ve explored the ancient city, we\'ll leave it behind and **head underground** to visit a local cenote.\n\nIn the Maya worldview, cenotes are **sacred places** connected to **Xibalba, the underworld**, and they continue to hold deep spiritual and cultural significance for Maya communities today. These extraordinary natural formations, with their **crystal-clear waters** and mysterious underground atmosphere, offer us a chance to experience something truly unique. And if you\'re feeling brave, there\'s even the option for a **cliff jump**!\n\nAnd if all that exploring makes you hungry and you don\'t want to ride back on an empty stomach, I\'ll be happy to recommend my **favorite local restaurants** and the most **traditional dishes** according to your dietary preferences. You pay for what you choose, with no fixed menu or package price. Your vacation, your appetite, your choice.\n\nIt\'s a day of ancient mysteries, jungle exploration, sacred waters, and a little local flavor along the way.\n\n**Ready to discover the Maya world with me?**',
     duration: '5 hours',
     groupSize: 'Up to 10',
     price: 567,
@@ -415,7 +486,32 @@ export const tours: Tour[] = [
       'All equipment and safety gear included',
       'Hotel pickup and drop-off included'
     ],
-    included: ['Private transport', 'All equipment', 'Safety gear', 'Guide', 'All fees'],
+    included: [
+      {
+        title: 'Your private, air-conditioned transportation',
+        description: 'Comfortable transportation throughout the day.'
+      },
+      {
+        title: 'Your private guide, of course',
+        description: "That would be me. I'll be with you throughout the experience."
+      },
+      {
+        title: 'Water and snacks',
+        description: "Because exploring is better when you're properly fueled."
+      },
+      {
+        title: 'All entrance fees',
+        description: 'Everything covered, so there are no surprises along the way.'
+      },
+      {
+        title: 'Hand-washed snorkeling equipment',
+        description: 'I personally wash and prepare all the snorkeling equipment before your adventure.'
+      },
+      {
+        title: 'Life jackets',
+        description: 'For comfort and an extra bit of support in the water.'
+      }
+    ],
     video: {
       src: '/videos/underworld/gx011005.mp4',
       poster: '/photos/underworld/admiring-the-cave.jpg'
@@ -430,22 +526,6 @@ export const tours: Tour[] = [
         alt: 'Deep blues and greens of the water inside a cenote'
       },
       {
-        src: '/photos/underworld/img_6301.jpg',
-        alt: 'Light falling through the opening of an underground cenote'
-      },
-      {
-        src: '/photos/underworld/img_2624.jpg',
-        alt: 'Still, mirror-clear water deep inside a cave cenote'
-      },
-      {
-        src: '/photos/underworld/img_3733.jpg',
-        alt: 'Stalactites hanging over the water of the Maya underworld'
-      },
-      {
-        src: '/photos/underworld/img_4443.jpg',
-        alt: 'Swimming in the cool water beneath the jungle floor'
-      },
-      {
         src: '/photos/underworld/img_4485.jpg',
         alt: 'Cavern cenote lit by a single shaft of daylight'
       },
@@ -453,6 +533,22 @@ export const tours: Tour[] = [
         src: '/photos/underworld/admiring-the-cave.jpg',
         alt: 'Video: img_4488',
         video: '/videos/underworld/img_4488.mp4'
+      },
+      {
+        src: '/photos/underworld/img_6301.jpg',
+        alt: 'Light falling through the opening of an underground cenote'
+      },
+      {
+        src: '/photos/underworld/img_3733.jpg',
+        alt: 'Stalactites hanging over the water of the Maya underworld'
+      },
+      {
+        src: '/photos/underworld/img_2624.jpg',
+        alt: 'Still, mirror-clear water deep inside a cave cenote'
+      },
+      {
+        src: '/photos/underworld/img_4443.jpg',
+        alt: 'Swimming in the cool water beneath the jungle floor'
       }
     ]
   }

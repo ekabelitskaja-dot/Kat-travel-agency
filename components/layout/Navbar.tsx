@@ -109,15 +109,19 @@ export function Navbar() {
             </div>
 
             <div className="flex items-center gap-3">
-              <button onClick={() => openModal()} className="hidden md:block">
-                {transparent ? (
-                  <span className="inline-block rounded-full border border-white/60 px-5 py-2 text-sm text-white transition-colors hover:bg-white/15 cursor-pointer">
-                    {t('nav.bookNow')}
-                  </span>
-                ) : (
-                  <Button size="md">{t('nav.bookNow')}</Button>
-                )}
-              </button>
+              {transparent ? (
+                <button
+                  type="button"
+                  onClick={() => openModal()}
+                  className="hidden md:inline-block rounded-full border border-white/60 px-5 py-2 text-sm text-white transition-colors hover:bg-white/15"
+                >
+                  {t('nav.bookNow')}
+                </button>
+              ) : (
+                <Button size="md" className="hidden md:inline-flex" onClick={() => openModal()}>
+                  {t('nav.bookNow')}
+                </Button>
+              )}
 
               <button
                 type="button"
@@ -143,9 +147,15 @@ export function Navbar() {
                 <NavLink href="/about" onNavigate={() => setOpen(false)}>{t('nav.about')}</NavLink>
                 <NavLink href="/services" onNavigate={() => setOpen(false)}>{t('nav.services')}</NavLink>
                 <NavLink href="/contact" onNavigate={() => setOpen(false)}>{t('nav.contact')}</NavLink>
-                <button onClick={() => { setOpen(false); openModal(); }} className="w-full mt-1">
-                  <Button className="w-full">{t('nav.bookNow')}</Button>
-                </button>
+                <Button
+                  className="w-full mt-1"
+                  onClick={() => {
+                    setOpen(false);
+                    openModal();
+                  }}
+                >
+                  {t('nav.bookNow')}
+                </Button>
               </div>
             </div>
           )}

@@ -15,7 +15,7 @@ export function TourStory({tagline, description}: {tagline: string; description:
         className={
           keepOnOneLine
             ? 'whitespace-nowrap text-[clamp(0.8125rem,2.15vw+0.55rem,1.5rem)] font-semibold leading-tight text-text'
-            : 'whitespace-pre-line text-2xl font-semibold leading-tight text-text md:text-3xl'
+            : 'whitespace-pre-line text-[clamp(0.8125rem,2.15vw+0.55rem,1.5rem)] font-semibold leading-tight text-text'
         }
       >
         {tagline}

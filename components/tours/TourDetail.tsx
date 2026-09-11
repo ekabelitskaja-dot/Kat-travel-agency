@@ -9,6 +9,75 @@ import {TourTabs} from './TourTabs';
 import {TourCard} from './TourCard';
 import {HeroVideo} from './HeroVideo';
 
+type GalleryItem = Tour['gallery'][number];
+
+function GalleryTile({
+  img,
+  className
+}: {
+  img: GalleryItem;
+  className?: string;
+}) {
+  return (
+    <div
+      className={
+        className ??
+        'relative aspect-[4/3] overflow-hidden rounded-3xl border border-text/10'
+      }
+    >
+      {img.video ? (
+        <HeroVideo
+          src={img.video}
+          poster={img.src}
+          alt={img.alt}
+          objectPosition={img.objectPosition}
+        />
+      ) : (
+        <Image
+          src={img.src}
+          alt={img.alt}
+          fill
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw, 50vw"
+        />
+      )}
+    </div>
+  );
+}
+
+function TourGallery({tour}: {tour: Tour}) {
+  const isCobaPuzzle = tour.slug === 'half-day-jungle-adventure';
+  const video = tour.gallery.find((item) => item.video);
+  const photos = tour.gallery.filter((item) => !item.video);
+
+  if (isCobaPuzzle && video) {
+    const [topA, topB, rightA, rightB, ...bottom] = photos;
+    return (
+      <div className="mt-6 grid gap-4 sm:grid-cols-2">
+        {topA ? <GalleryTile img={topA} /> : null}
+        {topB ? <GalleryTile img={topB} /> : null}
+        <GalleryTile
+          img={video}
+          className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-text/10 sm:aspect-auto sm:row-span-2 sm:h-full sm:min-h-0"
+        />
+        {rightA ? <GalleryTile img={rightA} /> : null}
+        {rightB ? <GalleryTile img={rightB} /> : null}
+        {bottom.map((img) => (
+          <GalleryTile key={img.video ?? img.src} img={img} />
+        ))}
+      </div>
+    );
+  }
+
+  return (
+    <div className="mt-6 grid gap-4 sm:grid-cols-2">
+      {tour.gallery.map((img) => (
+        <GalleryTile key={img.video ?? img.src} img={img} />
+      ))}
+    </div>
+  );
+}
+
 export function TourDetail({
   tour,
   related
@@ -87,31 +156,7 @@ export function TourDetail({
 
         <div className="mt-14">
           <h2 className="text-2xl md:text-3xl">{t('tourDetail.gallery')}</h2>
-          <div className="mt-6 grid gap-4 sm:grid-cols-2">
-            {tour.gallery.map((img) => (
-              <div
-                key={img.video ?? img.src}
-                className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-text/10"
-              >
-                {img.video ? (
-                  <HeroVideo
-                    src={img.video}
-                    poster={img.src}
-                    alt={img.alt}
-                    objectPosition={img.objectPosition}
-                  />
-                ) : (
-                  <Image
-                    src={img.src}
-                    alt={img.alt}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
-                )}
-              </div>
-            ))}
-          </div>
+          <TourGallery tour={tour} />
         </div>
 
         {related.length > 0 && (
