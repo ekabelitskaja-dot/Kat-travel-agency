@@ -18,7 +18,7 @@ function GalleryTile({
 }: {
   img: GalleryItem;
   className?: string;
-  videoFit?: 'cover' | 'native' | 'nativeUntilSm';
+  videoFit?: 'cover' | 'native' | 'nativeUntilLg';
 }) {
   return (
     <div
@@ -56,13 +56,13 @@ function TourGallery({tour}: {tour: Tour}) {
   if (isCobaPuzzle && video) {
     const [topA, topB, rightA, rightB, ...bottom] = photos;
     return (
-      <div className="mt-6 grid gap-4 sm:grid-cols-2">
+      <div className="mt-6 grid gap-4 lg:grid-cols-2">
         {topA ? <GalleryTile img={topA} /> : null}
         {topB ? <GalleryTile img={topB} /> : null}
         <GalleryTile
           img={video}
-          videoFit="nativeUntilSm"
-          className="relative overflow-hidden rounded-3xl border border-text/10 sm:row-span-2 sm:h-full sm:min-h-0"
+          videoFit="nativeUntilLg"
+          className="relative overflow-hidden rounded-3xl border border-text/10 lg:row-span-2 lg:h-full lg:min-h-0"
         />
         {rightA ? <GalleryTile img={rightA} /> : null}
         {rightB ? <GalleryTile img={rightB} /> : null}
@@ -90,17 +90,24 @@ export function TourDetail({
   related: Tour[];
 }) {
   const t = useTranslations();
+  const cobaNativeVideo = tour.slug === 'half-day-jungle-adventure' && Boolean(tour.video);
 
   return (
     <div className="pt-24 bg-bg">
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0" aria-hidden="true">
+        <div
+          className={
+            cobaNativeVideo ? 'relative lg:absolute lg:inset-0' : 'absolute inset-0'
+          }
+          aria-hidden="true"
+        >
           {tour.video ? (
             <HeroVideo
               src={tour.video.src}
               poster={tour.video.poster}
               alt={tour.image.alt}
               objectPosition={tour.video.objectPosition}
+              fit={cobaNativeVideo ? 'nativeUntilLg' : 'cover'}
               priority
             />
           ) : (
@@ -122,7 +129,13 @@ export function TourDetail({
           />
         </div>
 
-        <div className="relative mx-auto max-w-6xl px-6 pb-24 pt-28 md:pt-52 md:pb-44">
+        <div
+          className={
+            cobaNativeVideo
+              ? 'absolute inset-0 flex flex-col justify-end mx-auto w-full max-w-6xl px-6 pb-10 pt-28 lg:static lg:block lg:pb-44 lg:pt-52'
+              : 'relative mx-auto max-w-6xl px-6 pb-24 pt-28 md:pt-52 md:pb-44'
+          }
+        >
           <div className="max-w-3xl">
             <h1 className="text-4xl leading-[1.0] text-white md:text-6xl">
               {tour.name}

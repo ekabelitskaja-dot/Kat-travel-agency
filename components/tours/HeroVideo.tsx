@@ -13,7 +13,7 @@ type Props = {
   /** Only the hero should preload eagerly; gallery tiles sit below the fold. */
   priority?: boolean;
   /** `cover` fills a cropped frame. `native` keeps the video's own aspect ratio. */
-  fit?: 'cover' | 'native' | 'nativeUntilSm';
+  fit?: 'cover' | 'native' | 'nativeUntilLg';
 };
 
 /**
@@ -34,11 +34,11 @@ export function HeroVideo({
   const reduced = useReducedMotion();
   const ref = useRef<HTMLVideoElement>(null);
   const native = fit === 'native';
-  const nativeUntilSm = fit === 'nativeUntilSm';
+  const nativeUntilLg = fit === 'nativeUntilLg';
   const videoClassName = native
-    ? 'h-auto w-full'
-    : nativeUntilSm
-      ? 'h-auto w-full sm:absolute sm:inset-0 sm:h-full sm:w-full sm:object-cover'
+    ? 'block h-auto w-full max-w-full object-contain'
+    : nativeUntilLg
+      ? 'block h-auto w-full max-w-full object-contain lg:absolute lg:inset-0 lg:h-full lg:w-full lg:object-cover'
       : 'absolute inset-0 h-full w-full object-cover';
 
   useEffect(() => {
@@ -62,7 +62,7 @@ export function HeroVideo({
         />
       );
     }
-    if (nativeUntilSm) {
+    if (nativeUntilLg) {
       return (
         <Image
           src={poster}
@@ -70,9 +70,9 @@ export function HeroVideo({
           width={1920}
           height={1080}
           priority={priority}
-          className="h-auto w-full sm:absolute sm:inset-0 sm:h-full sm:w-full sm:object-cover"
+          className="block h-auto w-full max-w-full object-contain lg:absolute lg:inset-0 lg:h-full lg:w-full lg:object-cover"
           style={{objectPosition}}
-          sizes="(max-width: 768px) 100vw, 50vw"
+          sizes="(max-width: 1024px) 100vw, 50vw"
         />
       );
     }
