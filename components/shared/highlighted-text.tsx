@@ -1,6 +1,6 @@
 import type {ReactNode} from 'react';
 
-function BlobHighlight({children}: {children: ReactNode}) {
+export function BlobHighlight({children}: {children: ReactNode}) {
   return (
     <span
       className="font-semibold"

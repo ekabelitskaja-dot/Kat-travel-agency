@@ -2,7 +2,7 @@ import {useTranslations} from 'next-intl';
 
 import {AnimatedSection} from '@/components/shared/AnimatedSection';
 import {BookTourButton} from '@/components/shared/BookTourButton';
-import {renderMarkedText} from '@/components/shared/highlighted-text';
+import {BlobHighlight, renderMarkedText} from '@/components/shared/highlighted-text';
 import {SectionHeading} from '@/components/shared/SectionHeading';
 
 export function WhyKat() {
@@ -13,6 +13,15 @@ export function WhyKat() {
   const Copy = () => (
     <>
       {paragraphs.map((p, i) => {
+        const sectionLabel = p.match(/^\*\*([^*]+)\*\*$/);
+        if (sectionLabel) {
+          return (
+            <p key={i} className="text-base leading-7">
+              <BlobHighlight>{sectionLabel[1]}</BlobHighlight>
+            </p>
+          );
+        }
+
         const lines = p.split('\n');
         if (lines.length > 1) {
           return (
