@@ -24,7 +24,7 @@ export function FinalCTA() {
                 Tell me about your trip.<br />
                 {highlightAccent("I'll figure out the rest.", "the rest.")}
               </h2>
-              <p className="mt-4 text-base leading-7 text-text-muted">
+              <p className="mt-5 max-w-md whitespace-pre-line text-base leading-8 text-gray-600">
                 {t('finalCta.body')}
               </p>
             </div>
@@ -40,12 +40,13 @@ export function FinalCTA() {
                 </div>
                 <div>
                   <div className="text-sm font-medium text-text">WhatsApp</div>
-                  <div className="text-xs text-text-muted">{t('contact.instant')}</div>
                 </div>
               </a>
 
               <a
                 href={emailUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-3 rounded-2xl border border-text/10 bg-white px-5 py-4 hover:border-accent/30 hover:bg-accent/5 transition-colors"
               >
                 <div className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-accent/10">

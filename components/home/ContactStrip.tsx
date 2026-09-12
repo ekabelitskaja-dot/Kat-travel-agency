@@ -1,6 +1,6 @@
 import {Mail, MapPin, MessageCircle} from 'lucide-react';
 
-import {EMAIL, waLink} from '@/lib/contact';
+import {EMAIL, mailLink, waLink} from '@/lib/contact';
 
 export function ContactStrip() {
   return (
@@ -18,7 +18,9 @@ export function ContactStrip() {
             WhatsApp
           </a>
           <a
-            href={`mailto:${EMAIL}`}
+            href={mailLink('Tour Inquiry')}
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-2 hover:text-white transition-colors"
           >
             <Mail className="h-4 w-4" />

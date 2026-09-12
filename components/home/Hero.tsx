@@ -88,7 +88,7 @@ export function Hero() {
         <div className="flex w-full max-w-4xl flex-col items-center text-center">
           {/* Headline */}
           <motion.h1
-            className="flex w-full flex-col items-center text-[46px] font-medium uppercase tracking-[0.08em] text-white md:text-[82px]"
+            className="flex w-full flex-col items-center text-[38px] font-medium uppercase tracking-[0.08em] text-white md:text-[68px]"
             style={{lineHeight: 1.1, textShadow: '0 3px 24px rgba(0,0,0,0.4)'}}
             initial="hidden"
             animate="show"

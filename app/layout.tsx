@@ -7,14 +7,14 @@ import './globals.css';
 /** Headings (h1/h2/h3) and the "Kat B." wordmark. */
 const heading = Oswald({
   variable: '--font-heading',
-  subsets: ['latin'],
+  subsets: ['latin', 'cyrillic'],
   weight: ['400', '500', '600', '700'],
   display: 'swap'
 });
 
 const body = DM_Sans({
   variable: '--font-body',
-  subsets: ['latin'],
+  subsets: ['latin', 'latin-ext'],
   display: 'swap'
 });
 

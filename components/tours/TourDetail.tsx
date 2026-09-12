@@ -1,10 +1,9 @@
 import Image from 'next/image';
 import {useTranslations} from 'next-intl';
-import {MapPin, Clock, Car} from 'lucide-react';
+import {Clock, Car} from 'lucide-react';
 
 import type {Tour} from '@/data/tours';
 import {BookTourButton} from '@/components/shared/BookTourButton';
-import {ContactDropdown} from '@/components/shared/ContactDropdown';
 import {TourTabs} from './TourTabs';
 import {TourCard} from './TourCard';
 import {HeroVideo} from './HeroVideo';
@@ -146,7 +145,7 @@ export function TourDetail({
       </section>
 
       <section className="mx-auto max-w-6xl px-6 pt-0 pb-32">
-        <div className="-mt-11 mb-10 grid gap-4 md:gap-8 rounded-3xl border border-text/10 bg-white p-5 md:p-6 shadow-md relative z-10 md:grid-cols-3">
+        <div className="-mt-11 mb-10 grid gap-4 md:gap-8 rounded-3xl border border-text/10 bg-white p-5 md:p-6 shadow-md relative z-10 md:grid-cols-2">
           <div className="flex items-start gap-3 text-text">
             <Clock className="h-5 w-5 shrink-0 -mt-0.5 text-accent" aria-hidden="true" />
             <div>
@@ -159,13 +158,6 @@ export function TourDetail({
             <div>
               <div className="text-xs text-text-muted">{t('tourDetail.transportLabel')}</div>
               <div className="text-sm font-medium text-text">{t('tourDetail.transportValue')}</div>
-            </div>
-          </div>
-          <div className="flex items-start gap-3 text-text">
-            <MapPin className="h-5 w-5 shrink-0 -mt-0.5 text-accent" aria-hidden="true" />
-            <div>
-              <div className="text-xs text-text-muted">{t('tour.card.from')}</div>
-              <div className="text-sm font-medium text-text">${tour.price}</div>
             </div>
           </div>
         </div>
@@ -191,15 +183,9 @@ export function TourDetail({
       {/* Sticky Bottom Booking Bar */}
       <div className="fixed bottom-0 left-0 right-0 z-30 border-t border-text/10 bg-white/90 backdrop-blur-md shadow-[0_-8px_32px_rgba(28,28,26,0.12)]">
         <div className="mx-auto max-w-6xl px-6 py-4">
-          <div className="flex items-center justify-between gap-4">
-            <div>
-              <div className="text-xs text-text-muted">{t('tour.card.from')}</div>
-              <div className="text-2xl font-bold text-text">${tour.price}</div>
-            </div>
-            <div className="flex gap-3">
-              <div className="btn-pulse rounded-[900px]">
-                <BookTourButton label={t('tourDetail.bookThis')} tourName={tour.name} />
-              </div>
+          <div className="flex items-center justify-end gap-4">
+            <div className="btn-pulse rounded-[900px]">
+              <BookTourButton label={t('tourDetail.bookThis')} tourName={tour.name} />
             </div>
           </div>
         </div>

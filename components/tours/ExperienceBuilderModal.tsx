@@ -245,6 +245,8 @@ export function ExperienceBuilderModal({isOpen, onClose}: {isOpen: boolean; onCl
                         </a>
                         <a
                           href={mailLink(t('builder.mailSubject'), summary)}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="inline-flex flex-1 items-center justify-center rounded-full border border-text/15 bg-white px-6 py-3 text-sm font-medium text-text transition-colors hover:bg-surface"
                         >
                           {t('builder.ctaEmail')}

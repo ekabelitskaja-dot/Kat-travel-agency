@@ -121,7 +121,7 @@ export function ReviewsSlider() {
         {/* Reviews Container - Hidden Scrollbar */}
         <div
           ref={scrollerRef}
-          className="flex gap-6 overflow-x-auto px-6 md:px-12 scroll-smooth snap-x snap-mandatory"
+          className="flex items-stretch gap-6 overflow-x-auto px-6 md:px-12 scroll-smooth snap-x snap-mandatory"
           style={{
             scrollbarWidth: 'none',
             msOverflowStyle: 'none'
@@ -129,8 +129,8 @@ export function ReviewsSlider() {
         >
           {reviews.map((r, index) => (
             <motion.div
-              key={`${r.name}-${r.date}`}
-              className="min-w-[320px] sm:min-w-[380px] md:min-w-[420px] snap-start"
+              key={`${r.name}-${r.sourceUrl}`}
+              className="flex min-w-[320px] sm:min-w-[380px] md:min-w-[420px] snap-start"
               initial={reduced ? {opacity: 1} : {opacity: 0, x: 20}}
               whileInView={{opacity: 1, x: 0}}
               viewport={{once: true, margin: '-50px'}}

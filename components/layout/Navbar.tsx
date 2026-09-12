@@ -91,13 +91,28 @@ export function Navbar() {
             <div className="flex items-center gap-6">
               <Link
                 href="/"
-                className={[
-                  'font-serif text-lg md:text-xl tracking-tight transition-colors duration-300',
-                  transparent ? 'text-white' : 'text-text'
-                ].join(' ')}
-                aria-label="Kat B. Home"
+                className="inline-flex flex-col items-stretch font-serif text-lg tracking-tight md:text-xl"
+                aria-label="Mexico with Kat Home"
               >
-                Kat B.
+                <span
+                  style={{
+                    background: 'linear-gradient(100deg, #00D4FF -8.86%, #2EE0B4 104.42%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text'
+                  }}
+                >
+                  Mexico with Kat
+                </span>
+                <span
+                  className="mt-1 h-px w-full"
+                  style={{
+                    background: transparent
+                      ? 'rgba(255,255,255,0.7)'
+                      : 'linear-gradient(100deg, #00D4FF -8.86%, #2EE0B4 104.42%)'
+                  }}
+                  aria-hidden="true"
+                />
               </Link>
 
               <nav className="hidden md:flex items-center gap-1">

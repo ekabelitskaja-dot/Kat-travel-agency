@@ -25,7 +25,7 @@ export function SectionHeading({
           {eyebrow}
         </div>
       )}
-      <h2 className="mt-3 text-3xl leading-[1.05] md:text-4xl">
+      <h2 className="mt-3 whitespace-pre-line text-3xl leading-[1.05] md:text-4xl">
         {accentPhrase ? highlightAccent(title, accentPhrase) : title}
       </h2>
       {subtitle && (

@@ -16,10 +16,14 @@ export function waLink(message: string) {
   return `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(message)}`;
 }
 
+/** Gmail compose in the browser — mailto: does nothing if there's no mail app. */
 export function mailLink(subject: string, body?: string) {
-  // encodeURIComponent, not URLSearchParams - mail clients read a "+" in the
-  // body as a literal plus, not a space.
-  const query = [`subject=${encodeURIComponent(subject)}`];
+  const query = [
+    'view=cm',
+    'fs=1',
+    `to=${encodeURIComponent(EMAIL)}`,
+    `su=${encodeURIComponent(subject)}`
+  ];
   if (body) query.push(`body=${encodeURIComponent(body)}`);
-  return `mailto:${EMAIL}?${query.join('&')}`;
+  return `https://mail.google.com/mail/?${query.join('&')}`;
 }

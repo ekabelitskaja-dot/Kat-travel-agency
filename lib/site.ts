@@ -30,6 +30,4 @@ export const AREA_SERVED = [
   'Yucatán'
 ];
 
-export const SAME_AS = [
-  'https://www.toursbylocals.com/tour-guides/mexico/playa-del-carmen/guide-profile/kat-b-664d223396689af34337a5f5'
-];
+export const SAME_AS: string[] = [];

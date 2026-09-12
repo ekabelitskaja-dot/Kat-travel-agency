@@ -53,12 +53,11 @@
   },
   "reviews": {
     "eyebrow": "Lo Que Dicen Los Viajeros",
-    "title": "5 Estrellas En Todas Partes",
-    "source": "Todas las reseñas verificadas en ToursByLocals →"
+    "title": "5 Estrellas En Todas Partes"
   },
   "finalCta": {
     "title": "¿No Estás Seguro Qué Tour Es El Adecuado Para Ti?",
-    "body": "Dime cuándo llegas, cuántas personas son y qué te emociona - diseñaré la experiencia perfecta para tu grupo.",
+    "body": "¿No sabes qué tour le queda a tu grupo? Escríbeme.\nTe ayudo a armar un plan que encaje con tu agenda e intereses.",
     "cta": "Hablemos por WhatsApp"
   },
   "tours": {
@@ -127,8 +126,7 @@
     "experience": "Lo Que Aporto",
     "experienceBody": "Fluida en inglés, español y ruso. Guía certificada con conocimiento profundo de arqueología maya, ecología local y los mejores lugares escondidos que la Riviera Maya tiene para ofrecer.",
     "promise": "Mi Promesa",
-    "promiseBody": "Nunca te sentirás apresurado. Nunca serás solo otra cara en la multitud. Cada tour que dirijo se construye alrededor del ritmo, intereses y energía de tu grupo. Este es tu día - yo solo estoy aquí para hacerlo inolvidable.",
-    "reviewsLink": "Ver todas las reseñas en ToursByLocals →"
+    "promiseBody": "Nunca te sentirás apresurado. Nunca serás solo otra cara en la multitud. Cada tour que dirijo se construye alrededor del ritmo, intereses y energía de tu grupo. Este es tu día - yo solo estoy aquí para hacerlo inolvidable."
   },
   "contact": {
     "title": "Planifiquemos Tu Aventura",
@@ -211,5 +209,14 @@
     "summaryAddOns": "También me gustaría agregar:",
     "summaryNoAddOns": "Por ahora solo eso.",
     "summaryEstimate": "El estimado fue de"
+  },
+  "footer": {
+    "tagline": "Tours privados en Playa del Carmen, México",
+    "explore": "Explorar",
+    "whatsapp": "WhatsApp",
+    "goodToKnow": "Bueno saber",
+    "based": "Con base en Playa del Carmen",
+    "area": "Tours por la Riviera Maya",
+    "reply": "WhatsApp y email — te respondo yo"
   }
 }

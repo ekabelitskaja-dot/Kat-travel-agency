@@ -35,7 +35,7 @@ export function personSchema() {
       addressCountry: 'MX'
     },
     url: SITE_URL,
-    sameAs: SAME_AS,
+    ...(SAME_AS.length ? {sameAs: SAME_AS} : {}),
     worksFor: {'@id': businessId}
   };
 }
@@ -86,7 +86,7 @@ export function localBusinessSchema() {
       closes: '20:00'
     },
     knowsLanguage: ['en', 'es', 'ru'],
-    sameAs: SAME_AS,
+    ...(SAME_AS.length ? {sameAs: SAME_AS} : {}),
     employee: {'@id': personId},
     founder: {'@id': personId},
     aggregateRating: {
@@ -99,7 +99,6 @@ export function localBusinessSchema() {
     review: reviews.map((r) => ({
       '@type': 'Review',
       author: {'@type': 'Person', name: r.name},
-      datePublished: r.date,
       reviewBody: r.quote,
       reviewRating: {
         '@type': 'Rating',

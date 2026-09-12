@@ -6,7 +6,7 @@ import {FaqAccordion} from '@/components/contact/FaqAccordion';
 import {InquiryForm} from '@/components/contact/InquiryForm';
 import {JsonLd} from '@/components/seo/JsonLd';
 import {faqSchema, graphSchema} from '@/lib/schema';
-import {EMAIL, waLink} from '@/lib/contact';
+import {mailLink, waLink} from '@/lib/contact';
 
 export async function generateMetadata() {
   const t = await getTranslations('contact');
@@ -49,7 +49,9 @@ export default async function ContactPage() {
             </p>
           </a>
           <a
-            href={`mailto:${EMAIL}`}
+            href={mailLink('Tour Inquiry')}
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-3xl border border-text/10 bg-white/70 p-6 hover:border-accent/30"
           >
             <Mail className="h-5 w-5 text-accent" />

@@ -36,16 +36,9 @@ export function TourCard({tour}: {tour: Tour}) {
               <img src="/icons/avg_pace.svg" alt="" width={14} height={14} aria-hidden="true" />
               <span className="text-text">{tour.duration}</span>
             </span>
-            <span className="flex items-center gap-1">
-              <img src="/icons/person_2.svg" alt="" width={14} height={14} aria-hidden="true" />
-              <span className="text-text">{tour.groupSize}</span>
-            </span>
           </div>
 
-          <div className="mt-auto pt-6 flex items-center justify-between gap-4">
-            <div className="text-sm text-text">
-              {t('tour.card.from')} <span className="font-bold">${tour.price}</span>
-            </div>
+          <div className="mt-auto pt-6 flex items-center justify-end">
             <span className="inline-flex items-center rounded-full px-4 py-1.5 text-sm font-medium transition-colors duration-200 group-hover:opacity-80" style={{backgroundColor: '#CAFFF5', color: '#394D4A'}}>
               {t('tour.card.details')}
             </span>

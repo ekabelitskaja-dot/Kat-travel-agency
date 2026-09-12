@@ -60,7 +60,6 @@ export function FloatingContactButton() {
             </div>
             <div>
               <div className="text-sm font-medium text-text">WhatsApp</div>
-              <div className="text-xs text-text-muted">{t('contact.instant')}</div>
             </div>
           </a>
 
@@ -68,6 +67,8 @@ export function FloatingContactButton() {
 
           <a
             href={getEmailUrl()}
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-3 px-4 py-3 hover:bg-accent/5 transition-colors"
             onClick={() => setOpen(false)}
           >

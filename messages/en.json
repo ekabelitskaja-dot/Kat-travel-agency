@@ -20,20 +20,23 @@
     "scroll": "Explore"
   },
   "whyKat": {
-    "eyebrow": "Meet your guide",
-    "title": "Do you love exploring as much as I do? Let me show you around!",
+    "eyebrow": "Meet Kat",
+    "title": "Do you love exploring as much as I do?\nLet me show you around!",
     "paragraphs": [
-      "Hi, my name is Kat. I'm your private tour guide in the Riviera Maya and Yucatan, specializing in personalized adventures for families, couples, groups of friends and corporate teams.",
-      "Whether you're a nature lover, a history enthusiast, an adventurous soul, or simply looking for a different way to experience Mexico, I have a tour for you. And if you don't see the perfect combination of places and activities on my list, no problem. Tell me what you have in mind and let's create your adventure together.",
+      "**HI, MY NAME IS KAT!**\nI'm your private tour guide in the Riviera Maya and Yucatan, specializing in personalized adventures for families, couples, groups of friends and corporate teams.",
+      "Whether you're a nature lover, a history enthusiast, an adventurous soul, or simply looking for a different way to experience Mexico, I have a tour for you. And if you don't see the perfect combination of places and activities on my list, no problem. Let's create your adventure together.",
+      "**MY STORY**",
       "Originally from Estonia, I was temporarily adopted by the USA and then Australia before eventually finding my way to Mexico. After traveling around the US, Europe, Asia and Australia, I came to Mexico for a vacation... and never left.",
       "I fell in love with its breathtaking beaches and cenotes, its rich culture and history, and most importantly, its vibrant people. It's been 13 years now, and I've never looked back.",
+      "**MY PASSION**",
       "I feel very fortunate to be able to share the colors of Mexico with my guests, and there is so much to see. I can take you into the jungle to search for wild monkeys, plunge into the crystal-clear waters of a cenote, explore the mysteries of the Maya civilization and colorful colonial cities, or snorkel with whale sharks and sea turtles. I'll share with you stories of Maya life and Mexican culture, you'll find out how the cenotes were formed and why the sea animals are so amazing!",
       "I'm meticulous about providing the best service while showing you the hidden gems of the Riviera Maya and the Yucatan Peninsula.",
+      "**WHAT I BRING**",
       "I'm a certified tour guide, which means I'm authorized to guide inside Mexico's archaeological sites under the regulations of the National Institute of Anthropology and History (INAH).",
       "I have 13 years of experience guiding snorkeling tours, and I'll make sure you enjoy your time in the water, even if it's your first time snorkeling. I regularly renew my Red Cross First Aid certification.",
       "I'm also an amateur diver and freediver (PADI Open Water / AIDA 2).",
       "I'm an amateur photographer, too, and I'm more than happy to help you with pictures during our adventure. After all, someone has to prove you really swam in that cenote.",
-      "So, what would you like to see? Tell me what you have in mind."
+      "So, what would you like to see?"
     ],
     "signoff": "Mucho love,\nKat"
   },
@@ -61,12 +64,11 @@
   },
   "reviews": {
     "eyebrow": "What travelers say",
-    "title": "5 stars across the board",
-    "source": "All reviews verified on ToursByLocals →"
+    "title": "5 stars across the board"
   },
   "finalCta": {
     "title": "Tell me about your trip. I'll figure out the rest.",
-    "body": "Not sure which tour fits your group? Send me a message - when you're arriving, how many people, what excites you. I'll come back with a plan that actually makes sense for you. Most people hear back within the hour.",
+    "body": "Not sure which tour fits your group? Message me.\nI'll help you create a plan that fits your agenda and interests.",
     "cta": "Message me on WhatsApp"
   },
   "tours": {
@@ -135,8 +137,7 @@
     "experience": "What I bring",
     "experienceBody": "Eight years of guiding in English, Spanish, and Russian. Deep knowledge of Mayan archaeology, local ecology, and the hidden corners of the Riviera Maya most visitors never find. I'm a certified guide - but more than that, I'm someone who genuinely loves this place and wants you to love it too.",
     "promise": "My promise to you",
-    "promiseBody": "You will never feel rushed. You will never be just a number. Every tour I lead is shaped around your group's pace, energy, and curiosity. Some of my guests come for adventure. Some come for history. Some just want to float in beautiful water and not think about anything. All of that is valid. All of that is possible. This is your day - I'm here to make it unforgettable.",
-    "reviewsLink": "Read all reviews on ToursByLocals →"
+    "promiseBody": "You will never feel rushed. You will never be just a number. Every tour I lead is shaped around your group's pace, energy, and curiosity. Some of my guests come for adventure. Some come for history. Some just want to float in beautiful water and not think about anything. All of that is valid. All of that is possible. This is your day - I'm here to make it unforgettable."
   },
   "contact": {
     "title": "Let's start planning",
@@ -219,5 +220,14 @@
     "summaryAddOns": "I'd also like to add:",
     "summaryNoAddOns": "Just that for now.",
     "summaryEstimate": "The builder estimated"
+  },
+  "footer": {
+    "tagline": "Private tours in Playa del Carmen, Mexico",
+    "explore": "Explore",
+    "whatsapp": "WhatsApp",
+    "goodToKnow": "Good to know",
+    "based": "Based in Playa del Carmen",
+    "area": "Tours across the Riviera Maya",
+    "reply": "WhatsApp and email — I reply myself"
   }
 }

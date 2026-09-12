@@ -49,7 +49,6 @@ Palette + tokens are defined in `app/globals.css` as CSS variables (e.g. `--colo
 - **Domain / metadataBase**: update `metadataBase` in `app/layout.tsx` (currently `https://yourdomain.com`).
 - **OG image**: metadata references `/og-image.jpg` (not included yet). Add a real file at `public/og-image.jpg`.
 - **Photos**: placeholder photography uses Unsplash image URLs. Search for `TODO: Replace with real photo`.
-- **ToursByLocals links**: placeholders exist in `components/layout/Footer.tsx` and `app/[locale]/about/page.tsx`.
 - **Contact form delivery**: `components/contact/InquiryForm.tsx` logs form payload and shows a success state. Wire to an email/API route later.
 
 ## Deployment (Vercel)
