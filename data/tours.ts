@@ -16,6 +16,7 @@ export type Tour = {
   categories: TourCategory[];
   highlights: string[];
   included: Array<string | {title: string; description: string}>;
+  goodToKnow?: {title: string; description: string}[];
   image: {
     src: string;
     alt: string;
@@ -86,6 +87,23 @@ export const tours: Tour[] = [
       {
         title: 'Life jackets',
         description: 'For comfort and an extra bit of support in the water.'
+      }
+    ],
+    goodToKnow: [
+      {
+        title: 'Sunblock-free zones',
+        description:
+          "To help protect the beautiful environment we're visiting, sunblock is not allowed in Akumal Bay or inside the cenotes."
+      },
+      {
+        title: 'Even reef-friendly sunscreen',
+        description:
+          'The chemicals in sunscreens affect coral, marine life, and the delicate ecosystems of cenotes. Yes, even reef-friendly ones. On our adventures, we keep the water as clean and wildlife-friendly as possible.'
+      },
+      {
+        title: 'What to wear instead',
+        description:
+          'For the best protection from the sun, long-sleeve rash guards, lightweight shirts, and long pants are your best friends.'
       }
     ],
     video: {

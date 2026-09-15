@@ -2,9 +2,6 @@
 
 import {useTranslations} from 'next-intl';
 
-import {Link} from '@/i18n/navigation';
-import {EMAIL, mailLink, waLink} from '@/lib/contact';
-
 function SignFemale() {
   return (
     <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden="true">
@@ -105,97 +102,52 @@ export function Footer() {
   const t = useTranslations();
 
   return (
-    <footer className="border-t border-text/10 bg-surface">
-      <div className="mx-auto max-w-6xl px-6 py-14">
-        <div className="flex flex-row items-start justify-between gap-6 md:gap-12">
-          <div className="min-w-0 flex-1">
-            <div className="flex h-8 items-end text-sm uppercase tracking-wider text-text-muted">
-              Mexico with Kat
-            </div>
-            <p className="mt-4 max-w-sm text-sm leading-6 text-text-muted">
-              {t('footer.tagline')}
+    <footer className="bg-surface">
+        <div className="h-px w-full bg-text/10" />
+        <div className="mx-auto max-w-6xl px-6 py-14">
+          <div className="flex h-8 items-end text-xs uppercase tracking-wider text-text-muted">
+            {t('footer.goodToKnow')}
+          </div>
+          <div className="mt-4 flex flex-col gap-3 text-sm leading-6 text-text-muted">
+            <p className="flex items-center gap-0.5">
+              <span>{t('footer.reply')}</span>
+              <svg viewBox="0 0 24 24" className="h-3.5 w-3.5 shrink-0" fill="none" aria-hidden="true">
+                <path
+                  d="M12 20.4S4.2 14.6 4.2 9.4C4.2 6.7 6.3 4.8 8.9 4.8c1.5 0 2.8.8 3.1 2 0.3-1.2 1.6-2 3.1-2 2.6 0 4.7 1.9 4.7 4.6 0 5.2-7.8 11-7.8 11Z"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinejoin="round"
+                />
+              </svg>
             </p>
-            <a
-              className="mt-4 block break-all text-sm text-text/80 hover:text-text"
-              href={mailLink('Tour Inquiry')}
-              target="_blank"
-              rel="noopener noreferrer"
+            <div className="h-px w-full bg-text/10" />
+            <p
+              className="flex items-center gap-3 text-text-muted/80"
+              aria-label="Everyone is welcome"
             >
-              {EMAIL}
-            </a>
-            <a
-              className="mt-2 block text-sm text-text/80 hover:text-text"
-              href={waLink("Hi Kat, I'm interested in a tour")}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {t('footer.whatsapp')}
-            </a>
-            <p className="mt-5 text-xs leading-none text-text-muted">
+              <span className="flex items-center gap-1.5">
+                <SignFemale />
+                <SignMale />
+                <SignVegan />
+              </span>
+              <SignNeutral />
+              <SignAlien />
+            </p>
+            <p>{t('footer.welcome')}</p>
+            <div className="h-px w-full bg-text/10" />
+            <p>Playa del Carmen, Mexico</p>
+            <p className="text-xs leading-none">
               English · Español · <span className="text-[10px]">Русский</span>
             </p>
           </div>
 
-          <div className="min-w-0 flex-1">
-            <div className="flex h-8 items-end text-xs uppercase tracking-wider text-text-muted">
-              {t('footer.explore')}
-            </div>
-            <nav className="mt-4 flex flex-col gap-2 text-sm">
-              <Link className="text-text/80 hover:text-text" href="/tours">
-                {t('nav.tours')}
-              </Link>
-              <Link className="text-text/80 hover:text-text" href="/about">
-                {t('nav.about')}
-              </Link>
-              <Link className="text-text/80 hover:text-text" href="/services">
-                {t('nav.services')}
-              </Link>
-              <Link className="text-text/80 hover:text-text" href="/contact">
-                {t('nav.contact')}
-              </Link>
-            </nav>
-          </div>
-
-          <div className="min-w-0 flex-1">
-            <div className="flex h-8 items-end text-xs uppercase tracking-wider text-text-muted">
-              {t('footer.goodToKnow')}
-            </div>
-            <div className="mt-4 flex flex-col gap-2 text-sm leading-6 text-text-muted">
-              <p>{t('footer.welcomeLead')}</p>
-              <p
-                className="flex items-center gap-3 text-text-muted/80"
-                aria-label="Everyone is welcome"
-              >
-                <span className="flex items-center gap-1.5">
-                  <SignFemale />
-                  <SignMale />
-                  <SignVegan />
-                </span>
-                <SignNeutral />
-                <SignAlien />
-              </p>
-              <p>{t('footer.welcomeTail')}</p>
-              <p className="flex items-center gap-0.5">
-                <span>{t('footer.reply')}</span>
-                <svg viewBox="0 0 24 24" className="h-3.5 w-3.5 shrink-0" fill="none" aria-hidden="true">
-                  <path
-                    d="M12 20.4S4.2 14.6 4.2 9.4C4.2 6.7 6.3 4.8 8.9 4.8c1.5 0 2.8.8 3.1 2 0.3-1.2 1.6-2 3.1-2 2.6 0 4.7 1.9 4.7 4.6 0 5.2-7.8 11-7.8 11Z"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </p>
-            </div>
+          <div className="mt-12">
+            <div className="h-px w-full bg-text/10" />
+            <span className="mt-6 block text-xs tracking-[0.18em] text-text-muted">
+              © 2026 Mexico with Kat
+            </span>
           </div>
         </div>
-
-        <div className="mt-12 border-t border-text/10 pt-6">
-          <span className="text-xs tracking-[0.18em] text-text-muted">
-            © 2026 Mexico with Kat
-          </span>
-        </div>
-      </div>
     </footer>
   );
 }

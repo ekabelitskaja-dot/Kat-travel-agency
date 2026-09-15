@@ -12,7 +12,7 @@
   "hero": {
     "headline": "Come curious\nLeave with stories",
     "accentWord": "private",
-    "subheadline": "Private tours around the Riviera Maya.\nBuilt around your group, your pace, and the places you'll remember.",
+    "subheadline": "Private tours around the Riviera Maya, Mexico.\nBuilt around your group, your pace, and the places you'll remember.",
     "cta": {
       "book": "See the tours",
       "whatsapp": "WhatsApp me"
@@ -226,8 +226,7 @@
     "explore": "Explore",
     "whatsapp": "WhatsApp",
     "goodToKnow": "Good to know",
-    "welcomeLead": "Come as you are",
-    "welcomeTail": "Humans, mermaids & everything in between.",
+    "welcome": "Come as you are. Humans, mermaids & everything in between.",
     "reply": "WhatsApp & Email — No bots, just me"
   }
 }

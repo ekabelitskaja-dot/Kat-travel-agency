@@ -13,15 +13,16 @@ export function TourTabs({tour}: {tour: Tour}) {
   const t = useTranslations();
   const [active, setActive] = useState<TabKey>('overview');
 
-  const tabs = useMemo(
-    () =>
-      [
-        {key: 'overview' as const, label: t('tourDetail.overview')},
-        {key: 'included' as const, label: t('tourDetail.included')},
-        {key: 'important' as const, label: t('tourDetail.important')}
-      ] satisfies Array<{key: TabKey; label: string}>,
-    [t]
-  );
+  const tabs = useMemo(() => {
+    const next: Array<{key: TabKey; label: string}> = [
+      {key: 'overview', label: t('tourDetail.overview')},
+      {key: 'included', label: t('tourDetail.included')}
+    ];
+    if (tour.goodToKnow?.length) {
+      next.push({key: 'important', label: t('tourDetail.important')});
+    }
+    return next;
+  }, [t, tour.goodToKnow]);
 
   return (
     <div className="mt-10">
@@ -90,16 +91,21 @@ export function TourTabs({tour}: {tour: Tour}) {
         </div>
       )}
 
-      {active === 'important' && (
+      {active === 'important' && tour.goodToKnow?.length ? (
         <div className="mt-8 rounded-3xl border border-text/10 bg-white/65 backdrop-blur-sm p-7">
-          <h3 className="text-xl">{t('tourDetail.important')}</h3>
-          <div className="mt-4 grid gap-3 text-sm leading-6 text-text-muted">
-            <p>{t('tourDetail.important.p1')}</p>
-            <p>{t('tourDetail.important.p2')}</p>
-            <p>{t('tourDetail.important.p3')}</p>
-          </div>
+          <ul className="grid gap-4 text-sm text-text-muted">
+            {tour.goodToKnow.map((item) => (
+              <li key={item.title} className="flex gap-3">
+                <span className="mt-2 h-1.5 w-1.5 rounded-full bg-accent shrink-0" />
+                <span>
+                  <span className="block font-medium text-text">{item.title}</span>
+                  <span className="mt-1 block leading-6">{item.description}</span>
+                </span>
+              </li>
+            ))}
+          </ul>
         </div>
-      )}
+      ) : null}
     </div>
   );
 }
