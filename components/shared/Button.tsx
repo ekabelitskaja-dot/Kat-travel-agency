@@ -1,6 +1,6 @@
 import type {ButtonHTMLAttributes, CSSProperties, ReactNode} from 'react';
 
-type Variant = 'primary' | 'outline' | 'ghost';
+type Variant = 'primary' | 'outline' | 'ghost' | 'soft';
 type Size = 'sm' | 'md' | 'lg';
 
 const base =
@@ -9,7 +9,8 @@ const base =
 const variants: Record<Variant, string> = {
   primary: 'text-white font-semibold shadow-[0_8px_32px_rgba(0,255,255,0.25)] hover:opacity-90',
   outline: 'border border-text/15 text-text hover:border-text/25 hover:bg-surface',
-  ghost: 'text-text hover:bg-surface'
+  ghost: 'text-text hover:bg-surface',
+  soft: 'border border-accent/30 bg-accent/10 text-text hover:border-[#00D4FF] hover:bg-[#00D4FF]/35'
 };
 
 const variantStyles: Partial<Record<Variant, CSSProperties>> = {

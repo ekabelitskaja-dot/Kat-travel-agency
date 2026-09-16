@@ -163,8 +163,17 @@ export function TourDetail({
         </div>
         <TourTabs tour={tour} />
 
-        <div className="mt-14">
-          <h2 className="text-2xl md:text-3xl">{t('tourDetail.gallery')}</h2>
+        <div className="mt-8">
+          <p className="text-[clamp(0.8125rem,2.15vw+0.55rem,1.5rem)] font-semibold leading-tight text-text">
+            {t('tourDetail.readyExplore')}
+          </p>
+          <div className="mt-6 mb-10">
+            <BookTourButton
+              variant="soft"
+              label={t('tourDetail.talkToKat')}
+              tourName={tour.name}
+            />
+          </div>
           <TourGallery tour={tour} />
         </div>
 

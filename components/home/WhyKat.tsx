@@ -49,7 +49,7 @@ export function WhyKat() {
 
   const Cta = ({className}: {className: string}) => (
     <div className={className}>
-      <BookTourButton label={t('tourDetail.talkToKat')} />
+      <BookTourButton variant="soft" label={t('tourDetail.talkToKat')} />
     </div>
   );
 

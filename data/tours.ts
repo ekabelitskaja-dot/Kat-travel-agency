@@ -13,10 +13,17 @@ export type Tour = {
   duration: string;
   groupSize: string;
   price: number;
+  /** USD per person for group sizes 1–10. */
+  pricePerPerson?: Array<number | null>;
   categories: TourCategory[];
   highlights: string[];
   included: Array<string | {title: string; description: string}>;
   goodToKnow?: {title: string; description: string}[];
+  itinerary?: {
+    title: string;
+    note?: string;
+    stops: Array<{time: string; place: string; description: string}>;
+  };
   image: {
     src: string;
     alt: string;
@@ -51,10 +58,11 @@ export const tours: Tour[] = [
     slug: 'half-day-snorkeling-adventure',
     name: 'Snorkeling Adventure',
     tagline: 'Two very different worlds. One unforgettable morning.',
-    description: 'What if you could swim with **green sea turtles** in the Caribbean and then trade the salty sea for a **crystal-clear cenote** in the Maya jungle, all before lunch?\n\nJoin me for this exciting snorkeling adventure that\'s perfect for **all ages!**\n\nFIRST STOP: TURTLE BAY\n\nWe\'ll start our morning bright and early, aiming to be among the first visitors at Turtle Bay, avoiding the crowds and the midday heat. The sea is usually calmer in the morning, giving us some of the best conditions for swimming and snorkeling.\n\n**First-time snorkeler? No problem!** I\'ll share all the tips and tricks you need to feel comfortable and relaxed in the water and actually **enjoy** this unique experience.\n\nWe\'ll swim out from the beach in search of majestic green sea turtles in their **natural habitat**. You\'ll get to swim alongside one of the most ancient creatures on our planet! And if we\'re lucky, we might even catch them enjoying their breakfast!\n\nI\'ll share all the interesting facts about these magnificent creatures, as well as some of the ways you can actively contribute to the **conservation and protection** of sea turtles.\n\nTHEN, INTO THE MAYA JUNGLE\n\nAfter swimming in the salty waters of the Caribbean Sea, we\'ll head into the Maya jungle, where we\'ll swap the sea for the cool, crystal-clear waters of a cenote. You\'ll have a chance to **swim and snorkel**, enjoy the jungle around you, and, of course, I\'ll tell you stories about why cenotes were so important to the Maya and why they are such a special part of this region.\n\nTwo completely different environments, one morning, and plenty to discover along the way.\n\n**Ready to come explore with me?**',
+    description: 'What if you could swim with **green sea turtles** in the Caribbean and then trade the salty sea for a **crystal-clear cenote** in the Maya jungle, all before lunch?\n\nJoin me for this exciting snorkeling adventure that\'s perfect for **all ages!**\n\nFIRST STOP: TURTLE BAY\n\nWe\'ll start our morning bright and early, aiming to be among the first visitors at Turtle Bay, avoiding the crowds and the midday heat. The sea is usually calmer in the morning, giving us some of the best conditions for swimming and snorkeling.\n\n**First-time snorkeler? No problem!** I\'ll share all the tips and tricks you need to feel comfortable and relaxed in the water and actually **enjoy** this unique experience.\n\nWe\'ll swim out from the beach in search of majestic green sea turtles in their **natural habitat**. You\'ll get to swim alongside one of the most ancient creatures on our planet! And if we\'re lucky, we might even catch them enjoying their breakfast!\n\nI\'ll share all the interesting facts about these magnificent creatures, as well as some of the ways you can actively contribute to the **conservation and protection** of sea turtles.\n\nTHEN, INTO THE MAYA JUNGLE\n\nAfter swimming in the salty waters of the Caribbean Sea, we\'ll head into the Maya jungle, where we\'ll swap the sea for the cool, crystal-clear waters of a cenote. You\'ll have a chance to **swim and snorkel**, enjoy the jungle around you, and, of course, I\'ll tell you stories about why cenotes are so important to the Maya and why they are such a special part of this region.\n\nTwo completely different environments, one morning, and plenty to discover along the way.',
     duration: '5 hours',
     groupSize: 'Up to 10',
     price: 562,
+    pricePerPerson: [350, 205, 155, 140, 130, 115, 105, 100, 95, 90],
     categories: ['half-day', 'water-cenotes'],
     highlights: [
       'Swim alongside wild green sea turtles in their natural habitat',
@@ -106,6 +114,36 @@ export const tours: Tour[] = [
           'For the best protection from the sun, long-sleeve rash guards, lightweight shirts, and long pants are your best friends.'
       }
     ],
+    itinerary: {
+      title: 'Your day at a glance',
+      note: 'Times are approximate and can vary a little depending on your pace, traffic, weather, and conditions.',
+      stops: [
+        {
+          time: '7:00 AM',
+          place: 'Hotel pickup',
+          description:
+            "I'll pick you up at your hotel in a comfortable, air-conditioned vehicle, with chilled water and snacks ready for the road."
+        },
+        {
+          time: '8:00 AM',
+          place: 'Akumal Bay',
+          description:
+            'We start in the Caribbean while the day is still fresh and the crowds are lighter. Time to snorkel and keep an eye out for green sea turtles.'
+        },
+        {
+          time: '10:00 AM',
+          place: 'Cenote',
+          description:
+            'Then we trade the salty sea for the jungle and cool off in a crystal-clear Maya cenote.'
+        },
+        {
+          time: '1:00 PM',
+          place: 'Back to your hotel',
+          description:
+            "After a morning of turtles, jungle and cenote water, we head back. Relax, dry off and let the day's adventures sink in."
+        }
+      ]
+    },
     video: {
       src: '/videos/snorkeling/akumal-sea-turtle.mp4',
       poster: '/photos/snorkeling/green-sea-turtle-akumal.jpg'
