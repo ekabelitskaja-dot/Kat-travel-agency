@@ -57,18 +57,17 @@ export function TourTabs({tour}: {tour: Tour}) {
   const t = useTranslations();
   const [active, setActive] = useState<TabKey>('overview');
 
-  const tabs = useMemo(() => {
-    const next: Array<{key: TabKey; label: string}> = [
-      {key: 'overview', label: t('tourDetail.overview')},
-      {key: 'included', label: t('tourDetail.included')}
-    ];
-    if (tour.goodToKnow?.length) {
-      next.push({key: 'important', label: t('tourDetail.important')});
-    }
-    next.push({key: 'whatToBring', label: t('tourDetail.whatToBring')});
-    next.push({key: 'pricing', label: t('tourDetail.pricing')});
-    return next;
-  }, [t, tour.goodToKnow]);
+  const tabs = useMemo(
+    () =>
+      [
+        {key: 'overview' as const, label: t('tourDetail.overview')},
+        {key: 'included' as const, label: t('tourDetail.included')},
+        {key: 'important' as const, label: t('tourDetail.important')},
+        {key: 'whatToBring' as const, label: t('tourDetail.whatToBring')},
+        {key: 'pricing' as const, label: t('tourDetail.pricing')}
+      ] satisfies Array<{key: TabKey; label: string}>,
+    [t]
+  );
 
   return (
     <div className="mt-10">
@@ -126,6 +125,18 @@ export function TourTabs({tour}: {tour: Tour}) {
               <div className="mt-8 h-px w-full bg-text/10" />
             </div>
           ) : null}
+          <div className="mt-8">
+            <p className="text-[clamp(0.8125rem,2.15vw+0.55rem,1.5rem)] font-semibold leading-tight text-text">
+              {t('tourDetail.readyExplore')}
+            </p>
+            <div className="mt-6">
+              <BookTourButton
+                variant="soft"
+                label={t('tourDetail.talkToKat')}
+                tourName={tour.name}
+              />
+            </div>
+          </div>
         </div>
       )}
 
@@ -151,24 +162,42 @@ export function TourTabs({tour}: {tour: Tour}) {
         </div>
       )}
 
-      {active === 'important' && tour.goodToKnow?.length ? (
+      {active === 'important' && (
         <div className="mt-8 rounded-3xl border border-text/10 bg-white/65 backdrop-blur-sm p-7">
-          <ul className="grid gap-4 text-sm text-text-muted">
-            {tour.goodToKnow.map((item) => (
-              <li key={item.title} className="flex gap-3">
-                <span className="mt-2 h-1.5 w-1.5 rounded-full bg-accent shrink-0" />
-                <span>
-                  <span className="block font-medium text-text">{item.title}</span>
-                  <span className="mt-1 block leading-6">{item.description}</span>
-                </span>
-              </li>
-            ))}
-          </ul>
+          {tour.goodToKnow?.length ? (
+            <ul className="grid gap-4 text-sm text-text-muted">
+              {tour.goodToKnow.map((item) => (
+                <li key={item.title} className="flex gap-3">
+                  <span className="mt-2 h-1.5 w-1.5 rounded-full bg-accent shrink-0" />
+                  <span>
+                    <span className="block font-medium text-text">{item.title}</span>
+                    <span className="mt-1 block leading-6">{item.description}</span>
+                  </span>
+                </li>
+              ))}
+            </ul>
+          ) : null}
         </div>
-      ) : null}
+      )}
 
       {active === 'whatToBring' && (
-        <div className="mt-8 rounded-3xl border border-text/10 bg-white/65 backdrop-blur-sm p-7" />
+        <div className="mt-8 rounded-3xl border border-text/10 bg-white/65 backdrop-blur-sm p-7">
+          {tour.whatToBring?.length ? (
+            <ul className="grid gap-4 text-sm text-text-muted">
+              {tour.whatToBring.map((item) => (
+                <li key={item.title} className="flex gap-3">
+                  <span className="mt-2 h-1.5 w-1.5 rounded-full bg-accent shrink-0" />
+                  <span>
+                    <span className="block font-medium text-text">{item.title}</span>
+                    {item.description ? (
+                      <span className="mt-1 block leading-6">{item.description}</span>
+                    ) : null}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          ) : null}
+        </div>
       )}
 
       {active === 'pricing' && (

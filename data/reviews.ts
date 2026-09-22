@@ -21,7 +21,7 @@ export const reviews: Review[] = [
     quote:
       'Kat, as the leader, was terrific! She was prompt for our early morning pickup and provided snacks and cold water for our van ride to Coba.',
     source: 'TripAdvisor',
-    sourceUrl: 'https://www.tripadvisor.com'
+    sourceUrl: 'https://www.tripadvisor.com/Attraction_Review-g150812-d25369011-Reviews-Motion_Travel_Mexico-Playa_del_Carmen_Yucatan_Peninsula.html'
   },
   {
     name: 'Emily H.',
@@ -29,7 +29,7 @@ export const reviews: Review[] = [
     quote:
       "We had three generations on this trip. Kat managed to keep everyone happy, which I wasn't sure was possible. Honestly, best day of the whole vacation.",
     source: 'TripAdvisor',
-    sourceUrl: 'https://www.tripadvisor.com'
+    sourceUrl: 'https://www.tripadvisor.com/Attraction_Review-g150812-d25369011-Reviews-Motion_Travel_Mexico-Playa_del_Carmen_Yucatan_Peninsula.html'
   },
   {
     name: 'Rebecca M.',

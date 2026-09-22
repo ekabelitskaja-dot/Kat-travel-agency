@@ -30,6 +30,9 @@ export function TourCard({tour}: {tour: Tour}) {
 
         <div className="flex flex-col p-6 flex-1">
           <h3 className="text-xl leading-tight">{tour.name}</h3>
+          <p className="mt-2 min-h-[1.375rem] text-sm leading-snug text-text-muted">
+            {tour.focus ?? '\u00a0'}
+          </p>
 
           <div className="mt-5 flex items-center gap-4 text-sm text-text-muted">
             <span className="flex items-center gap-1">

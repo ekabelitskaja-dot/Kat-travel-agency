@@ -1,12 +1,21 @@
 import Image from 'next/image';
 import {useTranslations} from 'next-intl';
-import {Clock, Car} from 'lucide-react';
+import {Binoculars, Car, Clock, Droplets, Sunrise, TreePalm, Waves} from 'lucide-react';
+import type {LucideIcon} from 'lucide-react';
 
 import type {Tour} from '@/data/tours';
 import {BookTourButton} from '@/components/shared/BookTourButton';
 import {TourTabs} from './TourTabs';
 import {TourCard} from './TourCard';
 import {HeroVideo} from './HeroVideo';
+
+const FOCUS_ICONS: Record<string, LucideIcon> = {
+  'half-day-snorkeling-adventure': Waves,
+  'monkey-sanctuary-coba-ruins': Binoculars,
+  'tulum-cenote-half-day': Sunrise,
+  'three-cenotes-half-day': Droplets,
+  'half-day-jungle-adventure': TreePalm
+};
 
 type GalleryItem = Tour['gallery'][number];
 
@@ -90,6 +99,7 @@ export function TourDetail({
 }) {
   const t = useTranslations();
   const cobaNativeVideo = tour.slug === 'half-day-jungle-adventure' && Boolean(tour.video);
+  const FocusIcon = FOCUS_ICONS[tour.slug] ?? Waves;
 
   return (
     <div className="pt-24 bg-bg">
@@ -153,27 +163,24 @@ export function TourDetail({
               <div className="text-sm font-medium text-text">{tour.duration}</div>
             </div>
           </div>
-          <div className="flex items-start gap-3 text-text">
-            <Car className="h-5 w-5 shrink-0 -mt-0.5 text-accent" aria-hidden="true" />
-            <div>
-              <div className="text-xs text-text-muted">{t('tourDetail.transportLabel')}</div>
-              <div className="text-sm font-medium text-text">{t('tourDetail.transportValue')}</div>
+          {tour.focus ? (
+            <div className="flex items-center gap-3 self-center text-text">
+              <FocusIcon className="h-6 w-6 shrink-0 text-accent" aria-hidden="true" />
+              <div className="text-base font-medium text-text">{tour.focus}</div>
             </div>
-          </div>
+          ) : (
+            <div className="flex items-start gap-3 text-text">
+              <Car className="h-5 w-5 shrink-0 -mt-0.5 text-accent" aria-hidden="true" />
+              <div>
+                <div className="text-xs text-text-muted">{t('tourDetail.transportLabel')}</div>
+                <div className="text-sm font-medium text-text">{t('tourDetail.transportValue')}</div>
+              </div>
+            </div>
+          )}
         </div>
         <TourTabs tour={tour} />
 
-        <div className="mt-8">
-          <p className="text-[clamp(0.8125rem,2.15vw+0.55rem,1.5rem)] font-semibold leading-tight text-text">
-            {t('tourDetail.readyExplore')}
-          </p>
-          <div className="mt-6 mb-10">
-            <BookTourButton
-              variant="soft"
-              label={t('tourDetail.talkToKat')}
-              tourName={tour.name}
-            />
-          </div>
+        <div className="mt-10">
           <TourGallery tour={tour} />
         </div>
 
