@@ -22,6 +22,8 @@ export type Tour = {
   included: Array<string | {title: string; description: string}>;
   goodToKnow?: {title: string; description: string}[];
   whatToBring?: {title: string; description?: string}[];
+  /** Closing line after the itinerary, above Talk to Kat. */
+  readyLine?: string;
   itinerary?: {
     title: string;
     note?: string;
@@ -257,7 +259,8 @@ export const tours: Tour[] = [
     slug: 'monkey-sanctuary-coba-ruins',
     name: 'Jungle Expedition',
     tagline: 'Ready to trade the beach for the jungle?',
-    description: 'Come with me into the Maya jungle, where **local communities**, **wildlife**, **ancient traditions**, and a little adventure are waiting.\n\nDuring our expedition, we\'ll visit a nature reserve run by local Maya families, where the experience starts with a **traditional purification ceremony** held by a local shaman. After this, we\'ll venture into the jungle in search of **spider monkeys and howler monkeys** that live freely in this protected area.\n\nAnd yes, finding monkeys in the jungle requires a little patience, a good eye, and a bit of luck. They are **wild animals**, after all, and they definitely did not check our itinerary before coming to work.\n\nAfter our serene walk through the jungle, we\'ll pick up the pace with an exciting **zip line ride** before slowing things down again with a relaxing **canoe ride** across the calm waters of the beautiful lagoon. Take in the beauty around you and enjoy the freshness of the water.\n\nNext, we\'ll head underground!\n\nWe\'ll rappel into a magnificent **cave cenote**, where you can cool off in the refreshing water and experience the mystical beauty of the **Maya underworld**. I\'ll share the story behind how these cenotes were formed and why they continue to hold such an important place in Maya culture.\n\nWe\'ll also explore the ancient Maya city of Coba, where you can **walk, ride a bicycle, or take a pedicab** through the jungle while discovering the archaeological remains of this once-thriving city.\n\nAs we explore, I\'ll share stories about the Maya civilization, from fascinating facts to the theories and mysteries that still surround this ancient culture. If you\'re a **history enthusiast**, bring your favorite documentary, book, or theory. I\'d love to hear what you think.\n\nMaya history, living traditions, jungle wildlife, adventure, and the magical world beneath the Yucatan Peninsula.\n\n**If that sounds like your kind of adventure, let\'s talk.**',
+    readyLine: "If that sounds like your kind of adventure, let's talk.",
+    description: 'Come with me into the Maya jungle, where **local communities**, **wildlife**, **ancient traditions**, and a little adventure are waiting.\n\nINTO THE JUNGLE\n\nDuring our expedition, we\'ll visit a nature reserve run by local Maya families, where the experience starts with a **traditional purification ceremony** held by a local shaman. After this, we\'ll venture into the jungle in search of **spider monkeys and howler monkeys** that live freely in this protected area.\n\nAnd yes, finding monkeys in the jungle requires a little patience, a good eye, and a bit of luck. They are **wild animals**, after all, but don\'t worry, the locals know a few ways to say hello.\n\nAfter our serene walk through the jungle, we\'ll pick up the pace with an exciting **zip line ride** before slowing things down again with a relaxing **canoe ride** across the calm waters of the beautiful lagoon. Take in the beauty around you and enjoy the freshness of the water.\n\nNext, we\'ll head underground!\n\nWe\'ll rappel into a magnificent **cave cenote**, where you can cool off in the refreshing water and experience the mystical beauty of the **Maya underworld**. I\'ll share the story behind how these cenotes were formed and why they continue to hold such an important place in Maya culture.\n\nTHEN, TO COBA\n\nWe\'ll also explore the ancient Maya city of Coba, where you can **walk, ride a bicycle, or take a pedicab** through the jungle while discovering the archaeological remains of this once-thriving city.\n\nAs we explore, I\'ll share stories about the Maya civilization, from fascinating facts to the theories and mysteries that still surround this ancient culture. If you\'re a **history enthusiast**, bring your favorite documentary, book, or theory. I\'d love to hear what you think.\n\nMaya history, living traditions, jungle wildlife, adventure, and the magical world beneath the Yucatan Peninsula.',
     duration: '8 hours',
     focus: 'Wild Monkeys & Coba Ruins',
     groupSize: 'Up to 10',
@@ -294,53 +297,100 @@ export const tours: Tour[] = [
     ],
     goodToKnow: [
       {
-        title: 'All ages are welcome',
+        title: 'A little jungle walking',
         description:
-          "This adventure is suitable for all ages, although I recommend it for children around 4–5 years and up. And if your little ones love the water, even better. They're going to have a blast!"
+          "There's some walking on uneven jungle ground, so comfortable shoes and reasonable mobility will make things easier. No extreme hiking required!"
       },
       {
-        title: "You don't have to be a competitive swimmer",
+        title: 'Little ones are welcome',
         description:
-          "Basic swimming skills will come in handy, but you definitely don't need to be a pro. I'll make sure you're comfortable and know what to do before we head into the water."
+          "There's no strict age limit, but I generally recommend this adventure for children around 4–5 years and up. You know your little explorer best!"
       },
       {
-        title: 'A little rain? No problem.',
+        title: 'Let the monkeys do their thing',
         description:
-          "A little rain doesn't stop us. In fact, swimming in the rain can be pretty magical. Lightning, however, means we take a coffee break."
+          "We're observing wild animals in their natural environment, so please don't bring food for them. Let's keep them wild."
       },
       {
-        title: 'Sunblock-free zones',
+        title: 'A little rain? Bring it on.',
         description:
-          "The cenotes are beautiful places, and we'd like to keep them that way. Sunscreen isn't allowed. Yes, even reef-friendly ones. Don't worry, I'll help you plan around the sun so you can stay comfortable while keeping the water clean."
-      },
-      {
-        title: 'What to wear instead',
-        description:
-          'For the best protection from the sun, long-sleeve rash guards, lightweight shirts, and long pants are your best friends.'
+          'Rain is part of jungle life and can make the experience even more magical. If it gets a little too enthusiastic, there are covered areas where we can take shelter until it passes.'
       }
     ],
     whatToBring: [
       {
-        title: 'Swimsuit and a towel',
-        description: 'A pretty good place to start.'
+        title: 'Comfortable shoes',
+        description: 'For hiking jungles and climbing temples.'
       },
       {
-        title: 'Rash guard or light long-sleeve shirt',
-        description: 'For the sun and the occasional mosquito in the jungle.'
+        title: 'Lightweight, comfortable clothes',
+        description:
+          'Something light that covers your arms and legs will help with the occasional jungle mosquito.'
       },
       {
-        title: 'Flip-flops or water shoes',
-        description: 'For a little walking and exploring.'
+        title: 'Sunglasses and a hat',
+        description: 'In case the sun finds its way through the treetops.'
       },
       {
-        title: 'A set of dry clothes',
-        description: 'For a comfortable ride back.'
+        title: 'Sunblock and mosquito repellent',
+        description:
+          'I always recommend covering up with clothing first, but if you prefer to use these, feel free to bring them along.'
       },
       {
-        title: 'And of course... your adventurous spirit.',
-        description: 'For... well, you knew that!'
+        title: 'Swimsuit and towel',
+        description: 'If you feel adventurous enough for the rappel into the cenote!'
+      },
+      {
+        title: 'Dry clothes',
+        description: 'For a comfortable ride back after your jungle adventures.'
+      },
+      {
+        title: 'Your curiosity and spirit for adventure!',
+        description: "The rest, I'll take care of."
       }
     ],
+    itinerary: {
+      title: 'Your day at a glance',
+      note: 'Times are approximate and can vary a little depending on your pace, traffic, weather, and conditions.',
+      stops: [
+        {
+          time: '7:00 AM',
+          place: 'Hotel pickup',
+          description:
+            "I'll pick you up at your hotel in a comfortable, air-conditioned vehicle, with chilled water and snacks ready for the road."
+        },
+        {
+          time: '8:30 AM',
+          place: 'Jungle reserve',
+          description:
+            'A welcome from local Maya families, a traditional purification ceremony, then into the trees in search of spider monkeys and howlers.'
+        },
+        {
+          time: '10:30 AM',
+          place: 'Zip line & canoe',
+          description:
+            'A ride through the canopy, then a slower paddle across the lagoon. Two speeds, same jungle.'
+        },
+        {
+          time: '11:30 AM',
+          place: 'Cave cenote',
+          description:
+            'We rappel into the Maya underworld and cool off in the water below. I will tell you how these places were formed, and why they still matter.'
+        },
+        {
+          time: '1:00 PM',
+          place: 'Coba',
+          description:
+            'Walk, bike, or take a pedicab through the ancient city. Bring your theories. I would love to hear them.'
+        },
+        {
+          time: '3:00 PM',
+          place: 'Back to your hotel',
+          description:
+            'An 8-hour day of jungle, water, and ruins. Time to rest and let it all settle.'
+        }
+      ]
+    },
     video: {
       src: '/videos/coba/monkey-watching-riviera-maya.mp4',
       poster: '/photos/coba/monkey-watching-riviera-maya.jpg'
@@ -407,7 +457,8 @@ export const tours: Tour[] = [
     slug: 'tulum-cenote-half-day',
     name: 'Tulum & The Sacred Cenote',
     tagline: 'Where Maya history meets the Caribbean and descends into the mysterious underworld.',
-    description: 'We\'ll start our day early, heading to Tulum **before the crowds** and the midday heat arrive. Perched dramatically above the Caribbean, Tulum is one of the most **picturesque Maya archaeological sites** in the region. But there\'s much more to it than a beautiful view. As we wander through the ancient city, I\'ll share the **stories and mysteries** that bring this remarkable place to life.\n\nFrom the ancient city, we\'ll venture into the Maya jungle to discover one of the region\'s beautiful **freshwater cenotes**. For the Maya, these natural pools are much more than places to find fresh water. They are **sacred places**, deeply connected to their beliefs and their relationship with the natural world. Cenotes remain an essential part of the landscape and culture of the Yucatan Peninsula.\n\nNow comes the refreshing part! We\'ll explore the cenote from the inside, **swimming and snorkeling** through its **crystal-clear waters**. I\'ll make sure everyone knows what to do with the snorkeling equipment and feels ready to explore, whether you\'re a pro snorkeler or this is your **first time** exploring beneath the surface.\n\nIt\'s a morning filled with **ancient history**, jungle landscapes, Caribbean views, and underwater exploration. You\'ll be back at your hotel around lunchtime, with the rest of the day completely yours. Perhaps a lazy afternoon on the beach sounds about right?\n\n**Ready to discover Tulum from a different perspective?**',
+    readyLine: 'Ready to discover Tulum from a different perspective?',
+    description: 'We\'ll start our day early, heading to Tulum **before the crowds** and the midday heat arrive. Perched dramatically above the Caribbean, Tulum is one of the most **picturesque Maya archaeological sites** in the region. But there\'s much more to it than a beautiful view. As we wander through the ancient city, I\'ll share the **stories and mysteries** that bring this remarkable place to life.\n\nTHEN, INTO THE MAYA JUNGLE\n\nFrom the ancient city, we\'ll venture into the Maya jungle to discover one of the region\'s beautiful **freshwater cenotes**. For the Maya, these natural pools are much more than places to find fresh water. They are **sacred places**, deeply connected to their beliefs and their relationship with the natural world. Cenotes remain an essential part of the landscape and culture of the Yucatan Peninsula.\n\nNow comes the refreshing part! We\'ll explore the cenote from the inside, **swimming and snorkeling** through its **crystal-clear waters**. I\'ll make sure everyone knows what to do with the snorkeling equipment and feels ready to explore, whether you\'re a pro snorkeler or this is your **first time** exploring beneath the surface.\n\nIt\'s a morning filled with **ancient history**, jungle landscapes, Caribbean views, and underwater exploration. You\'ll be back at your hotel around lunchtime, with the rest of the day completely yours. Perhaps a lazy afternoon on the beach sounds about right?',
     duration: '6 hours',
     focus: 'Before the crowds arrive',
     groupSize: 'Up to 10',
@@ -435,7 +486,8 @@ export const tours: Tour[] = [
       },
       {
         title: 'All entrance fees',
-        description: 'Everything covered, so there are no surprises along the way.'
+        description:
+          'Tickets to the Jaguar Park and Tulum Ruins, as well as the entrance fee to the cenote.'
       },
       {
         title: 'Hand-washed snorkeling equipment',
@@ -449,52 +501,83 @@ export const tours: Tour[] = [
     goodToKnow: [
       {
         title: 'All ages are welcome',
-        description:
-          "This adventure is suitable for all ages, although I recommend it for children around 4–5 years and up. And if your little ones love the water, even better. They're going to have a blast!"
+        description: 'This adventure is suitable for the whole family.'
       },
       {
-        title: "You don't have to be a competitive swimmer",
+        title: 'Plastic bottles stay behind',
         description:
-          "Basic swimming skills will come in handy, but you definitely don't need to be a pro. I'll make sure you're comfortable and know what to do before we head into the water."
+          "Single-use plastic isn't allowed inside the Tulum ruins. Bring your reusable water bottle instead!"
       },
       {
-        title: 'A little rain? No problem.',
+        title: 'Sunscreen-free zones',
         description:
-          "A little rain doesn't stop us. In fact, swimming in the rain can be pretty magical. Lightning, however, means we take a coffee break."
+          "Sunscreen isn't allowed before swimming in the cenote. Bring long-sleeve rash guards instead."
       },
       {
-        title: 'Sunblock-free zones',
-        description:
-          "The cenotes are beautiful places, and we'd like to keep them that way. Sunscreen isn't allowed. Yes, even reef-friendly ones. Don't worry, I'll help you plan around the sun so you can stay comfortable while keeping the water clean."
-      },
-      {
-        title: 'What to wear instead',
-        description:
-          'For the best protection from the sun, long-sleeve rash guards, lightweight shirts, and long pants are your best friends.'
+        title: "Rain won't ruin our plans",
+        description: 'A little rain is no problem. This tour is good to go in most weather conditions.'
       }
     ],
     whatToBring: [
       {
-        title: 'Swimsuit and a towel',
-        description: 'A pretty good place to start.'
+        title: 'Comfy shoes and clothes',
+        description: 'For effortless exploration.'
       },
       {
-        title: 'Rash guard or light long-sleeve shirt',
-        description: 'For the sun and the occasional mosquito in the jungle.'
+        title: 'Hats and sunglasses',
+        description: 'For the Caribbean sun.'
       },
       {
-        title: 'Flip-flops or water shoes',
-        description: 'For a little walking and exploring.'
+        title: 'Reusable water bottle',
+        description: 'If this one is travelling with you.'
+      },
+      {
+        title: 'Sunblock',
+        description: 'For a little extra protection in Tulum.'
+      },
+      {
+        title: 'Swimsuit and towel',
+        description: 'For that refreshing cenote exploration.'
       },
       {
         title: 'A set of dry clothes',
         description: 'For a comfortable ride back.'
       },
       {
-        title: 'And of course... your adventurous spirit.',
-        description: 'For... well, you knew that!'
+        title: 'Your desire for exploration!',
+        description: "The rest, I'll take care of."
       }
     ],
+    itinerary: {
+      title: 'Your day at a glance',
+      note: 'Times are approximate and can vary a little depending on your pace, traffic, weather, and conditions.',
+      stops: [
+        {
+          time: '7:00 AM',
+          place: 'Hotel pickup',
+          description:
+            "I'll pick you up at your hotel in a comfortable, air-conditioned vehicle, with chilled water and snacks ready for the road."
+        },
+        {
+          time: '8:00 AM',
+          place: 'Tulum ruins',
+          description:
+            'We arrive before the crowds and the midday heat. Time to walk the cliff-top city while the Caribbean is still quiet.'
+        },
+        {
+          time: '10:00 AM',
+          place: 'Cenote',
+          description:
+            'Then we leave the sea view behind and swim in a freshwater cenote. Snorkel gear is ready, first time or not.'
+        },
+        {
+          time: '1:00 PM',
+          place: 'Back to your hotel',
+          description:
+            'Back around lunchtime, with the rest of the day yours. A lazy afternoon on the beach would not be a bad idea.'
+        }
+      ]
+    },
     video: {
       src: '/videos/tulum/cave-cenote-riviera-maya.mp4',
       poster: '/photos/tulum/tulum-ruins-riviera-maya.jpg'
@@ -567,7 +650,8 @@ export const tours: Tour[] = [
     slug: 'three-cenotes-half-day',
     name: 'Jungle Playground',
     tagline: 'What happens when the jungle becomes your playground?',
-    description: 'Get ready for a day filled with adventure, **crystal-clear cenotes**, and a glimpse into **modern Maya life**.\n\nFollow me on an exhilarating **zip line ride** over the water, then slow things down with a tranquil **canoe journey** through one of the area\'s largest **open-air cenotes**. We\'ll take in the jungle from the water before heading to another breathtaking cenote, where you can swim in its crystal-clear waters and, if you\'re feeling brave, take the plunge with a **cliff jump**!\n\nBut this experience is about more than adventure.\n\nAs we explore the area, I\'ll share stories about modern Maya life, the community, and some of the traditions that are still part of everyday life today. We\'ll see **local homes** and visit a small community shop where **handmade souvenirs** are produced locally.\n\nAfter all that adventure, we\'ll sit down for a **traditional lunch** prepared by the locals, with the kind of homemade food that makes you very happy you worked up an appetite.\n\nIt\'s a morning that brings together adventure, nature, culture, and great local food, with a chance to experience a side of the Riviera Maya that goes beyond the beach and the resorts.\n\n**Sounds like your kind of day? Let\'s talk.**',
+    readyLine: "Sounds like your kind of day? Let's talk.",
+    description: 'Get ready for a day filled with adventure, **crystal-clear cenotes**, and a glimpse into **modern Maya life**.\n\nADVENTURE FIRST\n\nFollow me on an exhilarating **zip line ride** over the water, then slow things down with a tranquil **canoe journey** through one of the area\'s largest **open-air cenotes**. We\'ll take in the jungle from the water before heading to another breathtaking cenote, where you can swim in its crystal-clear waters and, if you\'re feeling brave, take the plunge with a **cliff jump**!\n\nTHEN, A GLIMPSE INTO MAYA LIFE\n\nThere\'s more to this experience than adventure.\n\nAs we explore the area, I\'ll share stories about modern Maya life, the community, and some of the traditions that are still part of everyday life today. We\'ll see **local homes** and visit a small community shop where **handmade souvenirs** are produced locally.\n\nAfter all that adventure, we\'ll sit down for a **traditional lunch** prepared by the locals, with the kind of homemade food that makes you very happy you worked up an appetite.\n\nIt\'s a morning that brings together adventure, nature, culture, and great local food, with a chance to experience a side of the Riviera Maya that goes beyond the beach and the resorts.',
     duration: '4.5 hours',
     focus: 'Zip Line, Canoes & Cenotes',
     groupSize: 'Up to 10',
@@ -595,7 +679,7 @@ export const tours: Tour[] = [
       },
       {
         title: 'All entrance fees',
-        description: 'Everything covered, so there are no surprises along the way.'
+        description: 'Your park admission.',
       },
       {
         title: 'Life jackets',
@@ -610,40 +694,43 @@ export const tours: Tour[] = [
       {
         title: 'All ages are welcome',
         description:
-          "This adventure is suitable for all ages, although I recommend it for children around 4–5 years and up. And if your little ones love the water, even better. They're going to have a blast!"
+          'This adventure is suitable for all ages, and little ones can even zip line together with their parents!'
       },
       {
-        title: "You don't have to be a competitive swimmer",
+        title: 'Some walking is involved',
         description:
-          "Basic swimming skills will come in handy, but you definitely don't need to be a pro. I'll make sure you're comfortable and know what to do before we head into the water."
+          'A reasonable level of mobility is needed to enjoy a little walking along the lovely jungle paths.'
       },
       {
-        title: 'A little rain? No problem.',
+        title: 'Sunblock use',
         description:
-          "A little rain doesn't stop us. In fact, swimming in the rain can be pretty magical. Lightning, however, means we take a coffee break."
+          "Even though sunblock isn't allowed in the cenote, we can use it for the rest of the adventure."
       },
       {
-        title: 'Sunblock-free zones',
+        title: 'We flow with the weather',
         description:
-          "The cenotes are beautiful places, and we'd like to keep them that way. Sunscreen isn't allowed. Yes, even reef-friendly ones. Don't worry, I'll help you plan around the sun so you can stay comfortable while keeping the water clean."
+          "A little rain or a little sunshine won't stop us. We simply go with it!"
       },
       {
-        title: 'What to wear instead',
-        description:
-          'For the best protection from the sun, long-sleeve rash guards, lightweight shirts, and long pants are your best friends.'
+        title: 'Any dietary restrictions?',
+        description: 'Please let me know in advance.'
       }
     ],
     whatToBring: [
       {
         title: 'Swimsuit and a towel',
-        description: 'A pretty good place to start.'
+        description: "Let's cover the basics."
       },
       {
         title: 'Rash guard or light long-sleeve shirt',
         description: 'For the sun and the occasional mosquito in the jungle.'
       },
       {
-        title: 'Flip-flops or water shoes',
+        title: 'Sunglasses and a hat',
+        description: 'We are on the Caribbean, after all...'
+      },
+      {
+        title: 'Comfy flip-flops or water shoes',
         description: 'For a little walking and exploring.'
       },
       {
@@ -651,10 +738,45 @@ export const tours: Tour[] = [
         description: 'For a comfortable ride back.'
       },
       {
-        title: 'And of course... your adventurous spirit.',
-        description: 'For... well, you knew that!'
+        title: 'And, as always... your adventurous spirit'
       }
     ],
+    itinerary: {
+      title: 'Your day at a glance',
+      note: 'Times are approximate and can vary a little depending on your pace, traffic, weather, and conditions.',
+      stops: [
+        {
+          time: '8:00 AM',
+          place: 'Hotel pickup',
+          description:
+            "I'll pick you up at your hotel in a comfortable, air-conditioned vehicle, with chilled water and snacks ready for the road."
+        },
+        {
+          time: '9:00 AM',
+          place: 'Zip line & canoe',
+          description:
+            'Over the water first, then into a canoe on one of the largest open-air cenotes. Fast, then quiet.'
+        },
+        {
+          time: '10:00 AM',
+          place: 'Cenotes',
+          description:
+            'Swim, snorkel, and if you are feeling brave, a cliff jump. Open, cave, and in-between, each one a little different.'
+        },
+        {
+          time: '11:30 AM',
+          place: 'Maya village & lunch',
+          description:
+            'A look at local homes and a small community shop, then a traditional lunch cooked by the people who live here.'
+        },
+        {
+          time: '1:00 PM',
+          place: 'Back to your hotel',
+          description:
+            'A short, full morning. Home in time to nap, swim, or do absolutely nothing.'
+        }
+      ]
+    },
     video: {
       src: '/videos/jungle-play/canoe-cenote-riviera-maya-1.mp4',
       poster: '/photos/jungle-play/ziplining-riviera-maya-mexico.jpg'
@@ -715,8 +837,9 @@ export const tours: Tour[] = [
   {
     slug: 'half-day-jungle-adventure',
     name: 'Coba & The Maya Underworld',
-    tagline: 'Step into the mystical world of the ancient Maya, then descend into the underworld for a very different kind of adventure.',
-    description: 'Our journey takes us to Coba, an **ancient Maya city** hidden deep in the jungle. Here, we\'ll discover the ruins **walking, riding a bicycle, or in a Maya limousine!** You choose how you\'d like to explore, while I share with you the **stories, beliefs, and mysteries** that make this place feel so different from the better-known Maya sites.\n\nOnce we\'ve explored the ancient city, we\'ll leave it behind and **head underground** to visit a local cenote.\n\nIn the Maya worldview, cenotes are **sacred places** connected to **Xibalba, the underworld**, and they continue to hold deep spiritual and cultural significance for Maya communities today. These extraordinary natural formations, with their **crystal-clear waters** and mysterious underground atmosphere, offer us a chance to experience something truly unique. And if you\'re feeling brave, there\'s even the option for a **cliff jump**!\n\nAnd if all that exploring makes you hungry and you don\'t want to ride back on an empty stomach, I\'ll be happy to recommend my **favorite local restaurants** and the most **traditional dishes** according to your dietary preferences. You pay for what you choose, with no fixed menu or package price. Your vacation, your appetite, your choice.\n\nIt\'s a day of ancient mysteries, jungle exploration, sacred waters, and a little local flavor along the way.\n\n**Ready to discover the Maya world with me?**',
+    tagline: 'Step into the mystical world of the ancient Maya, then descend into the underworld.',
+    readyLine: 'Ready to discover the Maya world with me?',
+    description: 'Our journey takes us to Coba, an **ancient Maya city** hidden deep in the jungle. Here, we\'ll discover the ruins **walking, riding a bicycle, or in a Maya limousine!** You choose how you\'d like to explore, while I share with you the **stories, beliefs, and mysteries** that make this place feel so different from the better-known Maya sites.\n\nTHE MAYA UNDERWORLD\n\nOnce we\'ve explored the ancient city, we\'ll leave it behind and **head underground** to visit a local cenote.\n\nIn the Maya worldview, cenotes are **sacred places** connected to **Xibalba, the underworld**, and they continue to hold deep spiritual and cultural significance for Maya communities today. These extraordinary natural formations, with their **crystal-clear waters** and mysterious underground atmosphere, offer us a chance to experience something truly unique. And if you\'re feeling brave, there\'s even the option for a **cliff jump**!\n\nLOCAL FLAVORS\n\nAnd if all that exploring makes you hungry and you don\'t want to ride back on an empty stomach, I\'ll be happy to recommend my **favorite local restaurants** and the most **traditional dishes** according to your dietary preferences. You pay for what you choose, with no fixed menu or package price. Your vacation, your appetite, your choice.\n\nIt\'s a day of ancient mysteries, jungle exploration, sacred waters, and a little local flavor along the way.',
     duration: '6 hours',
     focus: 'Bike the ruins & swim',
     groupSize: 'Up to 10',
@@ -744,66 +867,95 @@ export const tours: Tour[] = [
       },
       {
         title: 'All entrance fees',
-        description: 'Everything covered, so there are no surprises along the way.'
+        description: 'Admission to the ruins and the cenote.',
       },
       {
-        title: 'Hand-washed snorkeling equipment',
-        description: 'I personally wash and prepare all the snorkeling equipment before your adventure.'
-      },
-      {
-        title: 'Life jackets',
-        description: 'For comfort and an extra bit of support in the water.'
+        title: 'Transportation inside Coba',
+        description:
+          "Whether you choose a bicycle or Maya limousine, I've got you covered."
       }
     ],
     goodToKnow: [
       {
         title: 'All ages are welcome',
-        description:
-          "This adventure is suitable for all ages, although I recommend it for children around 4–5 years and up. And if your little ones love the water, even better. They're going to have a blast!"
+        description: 'As always, this adventure is suitable for all ages.'
       },
       {
-        title: "You don't have to be a competitive swimmer",
-        description:
-          "Basic swimming skills will come in handy, but you definitely don't need to be a pro. I'll make sure you're comfortable and know what to do before we head into the water."
+        title: 'Reasonable mobility is required',
+        description: 'To go down a set of steps into the cenote.'
       },
       {
-        title: 'A little rain? No problem.',
+        title: 'No weather-dependent adventure',
         description:
-          "A little rain doesn't stop us. In fact, swimming in the rain can be pretty magical. Lightning, however, means we take a coffee break."
+          "A little rain or sunshine won't stop us. We simply go with the flow!"
       },
       {
-        title: 'Sunblock-free zones',
+        title: 'No sunblock in the cenote',
         description:
-          "The cenotes are beautiful places, and we'd like to keep them that way. Sunscreen isn't allowed. Yes, even reef-friendly ones. Don't worry, I'll help you plan around the sun so you can stay comfortable while keeping the water clean."
-      },
-      {
-        title: 'What to wear instead',
-        description:
-          'For the best protection from the sun, long-sleeve rash guards, lightweight shirts, and long pants are your best friends.'
+          "Not to worry about this one. We're completely covered inside the cave."
       }
     ],
     whatToBring: [
       {
-        title: 'Swimsuit and a towel',
-        description: 'A pretty good place to start.'
+        title: 'Comfortable shoes',
+        description: 'For jungle exploring.'
       },
       {
-        title: 'Rash guard or light long-sleeve shirt',
-        description: 'For the sun and the occasional mosquito in the jungle.'
+        title: 'Light long-sleeve clothes',
+        description: 'For the sun and jungle mosquitoes.'
       },
       {
-        title: 'Flip-flops or water shoes',
-        description: 'For a little walking and exploring.'
+        title: 'Sunglasses and a hat',
+        description: 'For those first rays of sun.'
+      },
+      {
+        title: 'Swimsuit and towel',
+        description: 'To explore the cenote comfortably.'
       },
       {
         title: 'A set of dry clothes',
-        description: 'For a comfortable ride back.'
+        description: 'For that comfy ride back.'
       },
       {
-        title: 'And of course... your adventurous spirit.',
-        description: 'For... well, you knew that!'
+        title: 'The desire to explore!'
       }
     ],
+    itinerary: {
+      title: 'Your day at a glance',
+      note: 'Times are approximate and can vary a little depending on your pace, traffic, weather, and conditions.',
+      stops: [
+        {
+          time: '6:30 AM',
+          place: 'Hotel pickup',
+          description:
+            "I'll pick you up at your hotel in a comfortable, air-conditioned vehicle, with chilled water and snacks ready for the road."
+        },
+        {
+          time: '8:00 AM',
+          place: 'Coba',
+          description:
+            'The jungle city, at your pace: walk, bike, or a Maya limousine. I will share the stories that make this place feel different from the better-known ruins.'
+        },
+        {
+          time: '10:30 AM',
+          place: 'Cenote',
+          description:
+            'Then we head underground. Sacred water, a little cool air, and a cliff jump if you want one.'
+        },
+        {
+          time: '12:00 PM',
+          place: 'Lunch',
+          description:
+            'If you are hungry on the way back, I will point you to my favorite local spots. Your appetite, your choice.'
+        },
+        {
+          time: '2:00 PM',
+          place: 'Back to your hotel',
+          description:
+            'If you are hungry on the way back, I will point you to my favorite local spots. Your appetite, your choice.'
+        }
+      ]
+    },
     video: {
       src: '/videos/underworld/gx011005.mp4',
       poster: '/photos/underworld/admiring-the-cave.jpg'

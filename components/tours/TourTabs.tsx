@@ -127,7 +127,7 @@ export function TourTabs({tour}: {tour: Tour}) {
           ) : null}
           <div className="mt-8">
             <p className="text-[clamp(0.8125rem,2.15vw+0.55rem,1.5rem)] font-semibold leading-tight text-text">
-              {t('tourDetail.readyExplore')}
+              {tour.readyLine ?? t('tourDetail.readyExplore')}
             </p>
             <div className="mt-6">
               <BookTourButton

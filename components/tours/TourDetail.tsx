@@ -98,25 +98,19 @@ export function TourDetail({
   related: Tour[];
 }) {
   const t = useTranslations();
-  const cobaNativeVideo = tour.slug === 'half-day-jungle-adventure' && Boolean(tour.video);
   const FocusIcon = FOCUS_ICONS[tour.slug] ?? Waves;
 
   return (
     <div className="pt-24 bg-bg">
       <section className="relative overflow-hidden">
-        <div
-          className={
-            cobaNativeVideo ? 'relative lg:absolute lg:inset-0' : 'absolute inset-0'
-          }
-          aria-hidden="true"
-        >
+        <div className="absolute inset-0" aria-hidden="true">
           {tour.video ? (
             <HeroVideo
               src={tour.video.src}
               poster={tour.video.poster}
               alt={tour.image.alt}
               objectPosition={tour.video.objectPosition}
-              fit={cobaNativeVideo ? 'nativeUntilLg' : 'cover'}
+              fit="cover"
               priority
             />
           ) : (
@@ -138,29 +132,22 @@ export function TourDetail({
           />
         </div>
 
-        <div
-          className={
-            cobaNativeVideo
-              ? 'absolute inset-0 flex flex-col justify-end mx-auto w-full max-w-6xl px-6 pb-10 pt-28 lg:static lg:block lg:pb-44 lg:pt-52'
-              : 'relative mx-auto max-w-6xl px-6 pb-24 pt-28 md:pt-52 md:pb-44'
-          }
-        >
+        <div className="relative mx-auto max-w-6xl px-6 pb-24 pt-28 md:pt-52 md:pb-44">
           <div className="max-w-3xl">
             <h1 className="text-4xl leading-[1.0] text-white md:text-6xl">
               {tour.name}
             </h1>
           </div>
-
         </div>
       </section>
 
       <section className="mx-auto max-w-6xl px-6 pt-0 pb-32">
         <div className="-mt-11 mb-10 grid gap-4 md:gap-8 rounded-3xl border border-text/10 bg-white p-5 md:p-6 shadow-md relative z-10 md:grid-cols-2">
-          <div className="flex items-start gap-3 text-text">
-            <Clock className="h-5 w-5 shrink-0 -mt-0.5 text-accent" aria-hidden="true" />
-            <div>
-              <div className="text-xs text-text-muted">{t('tour.badge.duration')}</div>
-              <div className="text-sm font-medium text-text">{tour.duration}</div>
+          <div className="flex items-center gap-3 text-text">
+            <Clock className="h-5 w-5 shrink-0 text-accent" aria-hidden="true" />
+            <div className="flex items-baseline gap-2">
+              <span className="text-xs text-text-muted">{t('tour.badge.duration')}</span>
+              <span className="text-sm font-medium text-text">{tour.duration}</span>
             </div>
           </div>
           {tour.focus ? (
