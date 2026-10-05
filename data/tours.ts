@@ -463,6 +463,7 @@ export const tours: Tour[] = [
     focus: 'Before the crowds arrive',
     groupSize: 'Up to 10',
     price: 556,
+    pricePerPerson: [320, 180, 135, 130, 120, 110, 100, 95, 90, 85],
     categories: ['half-day', 'history-ruins', 'water-cenotes'],
     highlights: [
       'Tulum cliff-top ruins with views of the Caribbean Sea',
@@ -656,6 +657,7 @@ export const tours: Tour[] = [
     focus: 'Zip Line, Canoes & Cenotes',
     groupSize: 'Up to 10',
     price: 594,
+    pricePerPerson: [345, 205, 160, 155, 145, 130, 120, 115, 110, 105],
     categories: ['half-day', 'water-cenotes'],
     highlights: [
       'Three cenotes - open, cave, and semi-open - each completely different',
@@ -841,9 +843,10 @@ export const tours: Tour[] = [
     readyLine: 'Ready to discover the Maya world with me?',
     description: 'Our journey takes us to Coba, an **ancient Maya city** hidden deep in the jungle. Here, we\'ll discover the ruins **walking, riding a bicycle, or in a Maya limousine!** You choose how you\'d like to explore, while I share with you the **stories, beliefs, and mysteries** that make this place feel so different from the better-known Maya sites.\n\nTHE MAYA UNDERWORLD\n\nOnce we\'ve explored the ancient city, we\'ll leave it behind and **head underground** to visit a local cenote.\n\nIn the Maya worldview, cenotes are **sacred places** connected to **Xibalba, the underworld**, and they continue to hold deep spiritual and cultural significance for Maya communities today. These extraordinary natural formations, with their **crystal-clear waters** and mysterious underground atmosphere, offer us a chance to experience something truly unique. And if you\'re feeling brave, there\'s even the option for a **cliff jump**!\n\nLOCAL FLAVORS\n\nAnd if all that exploring makes you hungry and you don\'t want to ride back on an empty stomach, I\'ll be happy to recommend my **favorite local restaurants** and the most **traditional dishes** according to your dietary preferences. You pay for what you choose, with no fixed menu or package price. Your vacation, your appetite, your choice.\n\nIt\'s a day of ancient mysteries, jungle exploration, sacred waters, and a little local flavor along the way.',
     duration: '6 hours',
-    focus: 'Bike the ruins & swim',
+    focus: 'Bike the ruins and swim the cenote',
     groupSize: 'Up to 10',
     price: 567,
+    pricePerPerson: [350, 190, 140, 135, 115, 100, 95, 85, 80, 75],
     categories: ['half-day', 'adventure', 'water-cenotes'],
     highlights: [
       'Jungle zip line with views across the canopy',
