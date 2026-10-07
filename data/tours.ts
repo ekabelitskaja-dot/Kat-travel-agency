@@ -265,6 +265,7 @@ export const tours: Tour[] = [
     focus: 'Wild Monkeys & Coba Ruins',
     groupSize: 'Up to 10',
     price: 637,
+    pricePerPerson: [390, 230, 175, 165, 150, 135, 125, 120, 115, 110],
     categories: ['full-day', 'adventure', 'history-ruins'],
     highlights: [
       'Hang out with free-roaming spider monkeys at a wildlife sanctuary',
