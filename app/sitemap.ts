@@ -4,7 +4,7 @@ import {tours} from '@/data/tours';
 import {routing} from '@/i18n/routing';
 import {localizedUrl} from '@/lib/site';
 
-const staticPaths = ['/', '/tours', '/about', '/services', '/contact'];
+const staticPaths = ['/', '/tours', '/about', '/contact'];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();

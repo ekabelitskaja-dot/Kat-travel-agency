@@ -118,7 +118,6 @@ export function Navbar() {
               <nav className="hidden md:flex items-center gap-1">
                 <NavLink href="/tours" transparent={transparent}>{t('nav.tours')}</NavLink>
                 <NavLink href="/about" transparent={transparent}>{t('nav.about')}</NavLink>
-                <NavLink href="/services" transparent={transparent}>{t('nav.services')}</NavLink>
                 <NavLink href="/contact" transparent={transparent}>{t('nav.contact')}</NavLink>
               </nav>
             </div>
@@ -160,7 +159,6 @@ export function Navbar() {
               <div className="flex flex-col gap-2 rounded-xl bg-white/80 backdrop-blur-xl border border-white/40 p-4">
                 <NavLink href="/tours" onNavigate={() => setOpen(false)}>{t('nav.tours')}</NavLink>
                 <NavLink href="/about" onNavigate={() => setOpen(false)}>{t('nav.about')}</NavLink>
-                <NavLink href="/services" onNavigate={() => setOpen(false)}>{t('nav.services')}</NavLink>
                 <NavLink href="/contact" onNavigate={() => setOpen(false)}>{t('nav.contact')}</NavLink>
                 <Button
                   className="w-full mt-1"

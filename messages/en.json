@@ -3,7 +3,6 @@
     "skipToContent": "Skip to content",
     "tours": "Tours",
     "reviews": "Reviews",
-    "services": "Services",
     "about": "About Kat",
     "gallery": "Gallery",
     "contact": "Contact",
@@ -83,51 +82,39 @@
       "culture": "Culture & food"
     }
   },
-  "services": {
-    "title": "Everything you need, taken care of",
-    "subtitle": "From the moment you land to the moment you're back at your hotel - here's what I do beyond the standard tours.",
-    "private": {
-      "title": "100% private, always",
-      "body": "No strangers, no shared vans, no waiting for people you've never met. Every experience is exclusively your group - family, friends, partners. We move when you're ready."
-    },
-    "transport": {
-      "title": "Door-to-door transport",
-      "body": "I pick you up and drop you off at your hotel or resort in Playa del Carmen, Tulum, Puerto Aventuras, or Akumal. Air-conditioned comfort the whole way - no taxis to figure out."
-    },
-    "languages": {
-      "title": "Guided in your language",
-      "body": "English, Spanish, Russian - fluently, not conversationally. If your group speaks a mix, everyone gets the full experience. No one gets the short version."
-    },
-    "custom": {
-      "title": "Built around you",
-      "body": "Mix a cenote swim with a ruin visit. Add wildlife time. Skip what doesn't excite you. Tell me what your perfect day looks like and I'll make it happen."
-    }
-  },
   "faq": {
-    "title": "Good questions",
+    "title": "Popular questions",
     "q1": {
       "question": "How far in advance should I book?",
-      "answer": "At least a week ahead is ideal, especially December through April when the Riviera Maya is at its busiest. That said, if I have availability, I'll always try to make last-minute work - just message me."
+      "answer": "As soon as you start planning your trip! December through April is the busiest season in the Riviera Maya, so booking early is always a good idea to secure your preferred date. That said, if I have availability, I'll always do my best to accommodate last-minute bookings. Just send me a message!"
     },
     "q2": {
-      "question": "Do you provide snorkeling gear?",
-      "answer": "Yes - masks, fins, and life jackets for everyone in your group, all included. You don't need to bring or rent anything."
+      "question": "Can you pick us up from our resort?",
+      "answer": "Absolutely! I pick up from Playa del Carmen, Tulum, Puerto Aventuras, and Akumal at no extra charge. Pickups in Cancún are also possible for an additional transportation fee."
     },
     "q3": {
-      "question": "Can you pick us up from our resort?",
-      "answer": "Absolutely. I pick up from Playa del Carmen, Tulum, Puerto Aventuras, and Akumal at no extra charge. Cancún pickups are possible too - just ask and I'll let you know if there's a small transport fee."
+      "question": "We're traveling with young kids. Is that okay?",
+      "answer": "Of course! I personally love guiding little ones, and your kids can have the time of their lives! Just tell me their ages, and I'll recommend the right experience for your family."
     },
     "q4": {
-      "question": "We're traveling with young kids - is that okay?",
-      "answer": "Completely. Some of my favorite tours are with families. I know which cenotes are calm and shallow for little ones, and I'll make sure the pace works for everyone. Just tell me the ages and I'll recommend the right experience."
+      "question": "Can we build a personalized tour?",
+      "answer": "Yes! You bring the curiosity, I bring the local know-how. Tell me what excites your group: ruins, cenotes, wildlife, food, or a little bit of everything. I'll help you put together an adventure that feels just right for your group."
     },
     "q5": {
-      "question": "Can we build a custom tour?",
-      "answer": "Yes, and it's honestly my favorite thing to do. Tell me what excites your group - ruins, cenotes, wildlife, food, all of the above - and I'll design a day around exactly that."
+      "question": "Is lunch included?",
+      "answer": "It depends on the tour. Some include a local meal, while others don't. Either way, I know the best spots nearby and can recommend places you'll love."
     },
     "q6": {
-      "question": "Is lunch included?",
-      "answer": "It depends on the tour - some include a local meal, others don't. Either way, I always know the best spots nearby and I'll point you in the right direction. You won't eat at a tourist trap on my watch."
+      "question": "Do you provide snorkeling gear?",
+      "answer": "Yes! I provide hand-washed masks and snorkels, plus life jackets for everyone in your group, all included in the price. You don't need to bring or rent anything."
+    },
+    "q7": {
+      "question": "How safe is the Riviera Maya?",
+      "answer": "The Riviera Maya welcomes millions of visitors every year, and most enjoy their stay without any problems. Like any destination, it has safety risks, so stay aware of your surroundings, use reliable transportation, and take sensible precautions. As a local guide, I'll help you explore with confidence and make the most of your time in Mexico!"
+    },
+    "q8": {
+      "question": "What if it rains?",
+      "answer": "A little rain won't spoil our adventure! My tours aren't weather-dependent, but if lightning or unsafe conditions arise, we'll adjust plans to keep everyone safe. After all, there's no bad weather in the Caribbean, just a different kind of adventure!"
     }
   },
   "about": {
@@ -157,7 +144,7 @@
     },
     "hours": {
       "title": "Response time",
-      "body": "I'm usually available 8am-8pm Mexico time (GMT-5). If I'm out on a tour, I'll reply as soon as I'm back."
+      "body": "I'm usually available 9am-6pm Mexico time (GMT-5). If I'm out on a tour, I'll reply as soon as I'm back."
     },
     "location": {
       "title": "Based in",
@@ -201,7 +188,7 @@
     "transportValue": "Hotel pickup and drop-off included",
     "bookThis": "Book this tour",
     "talkToKat": "Talk to Kat",
-    "talkGreeting": "Hey, welcome to Mexico with Kat!\n\nAsk me anything: a question, a concern, or the start of a plan.",
+    "talkGreeting": "Hey, welcome to Mexico with Kat!\n\nHave a question, need a little advice, or thinking about planning an adventure? I'm here to help!",
     "readyExplore": "Ready to come explore with me?",
     "askWhatsapp": "Ask me a question",
     "related": "Other tours you might like"

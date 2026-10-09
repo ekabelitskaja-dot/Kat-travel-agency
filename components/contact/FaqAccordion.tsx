@@ -7,11 +7,11 @@ export function FaqAccordion() {
 
   return (
     <div>
-      <h2 className="text-2xl md:text-3xl">{t('faq.title')}</h2>
-      <div className="mt-6">
+      <p className="text-xs uppercase tracking-[0.18em] text-text-muted">{t('faq.title')}</p>
+      <div className="mt-2">
         <Accordion
           defaultOpenId="q1"
-          items={[1, 2, 3, 4, 5, 6].map((n) => ({
+          items={[1, 2, 3, 4, 5, 6, 7, 8].filter((n) => t.has(`faq.q${n}.question`)).map((n) => ({
             id: `q${n}`,
             question: t(`faq.q${n}.question`),
             answer: t(`faq.q${n}.answer`)

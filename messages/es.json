@@ -3,7 +3,6 @@
     "skipToContent": "Saltar al contenido",
     "tours": "Tours",
     "reviews": "Reseñas",
-    "services": "Servicios",
     "about": "Sobre Kat",
     "gallery": "Galería",
     "contact": "Contacto",
@@ -69,26 +68,6 @@
       "ruins": "Ruinas Mayas",
       "jungle": "Selva y Vida Silvestre",
       "culture": "Cultura y Comida"
-    }
-  },
-  "services": {
-    "title": "Todos Los Detalles Que Necesitas Saber",
-    "subtitle": "Qué está incluido, cómo hacemos los tours y todo lo que hace que esta experiencia sea fluida.",
-    "private": {
-      "title": "Tours 100% Privados",
-      "body": "Sin extraños, sin multitudes. Cada tour es exclusivamente tu grupo - familia, amigos, quien traigas. Nos movemos a tu ritmo."
-    },
-    "transport": {
-      "title": "Transporte Incluido",
-      "body": "Te recojo y dejo en tu hotel o resort (Playa del Carmen, Tulum, Puerto Aventuras, Akumal). Comodidad con aire acondicionado todo el camino."
-    },
-    "languages": {
-      "title": "Inglés, Español y Ruso",
-      "body": "Guío con fluidez en los tres idiomas. Si tu grupo habla diferentes idiomas, no hay problema - todos reciben la historia completa."
-    },
-    "custom": {
-      "title": "Itinerarios Personalizados",
-      "body": "¿Quieres mezclar cenotes con ruinas? ¿Prefieres más tiempo de vida silvestre y menos historia? Dime qué te emociona y construiré el día perfecto alrededor de eso."
     }
   },
   "faq": {
@@ -189,7 +168,7 @@
     "transportValue": "Transporte desde y hacia tu hotel incluido",
     "bookThis": "Reservar Este Tour",
     "talkToKat": "Habla con Kat",
-    "talkGreeting": "¡Hola, bienvenido a Mexico with Kat!\n\nPregúntame lo que sea: una pregunta, una inquietud o el comienzo de un plan.",
+    "talkGreeting": "¡Hola, bienvenido a Mexico with Kat!\n\n¿Tienes una pregunta, necesitas un consejo, o estás pensando en planear una aventura? ¡Estoy aquí para ayudarte!",
     "readyExplore": "¿Listo para explorar conmigo?",
     "askWhatsapp": "Hacer una Pregunta (WhatsApp)",
     "related": "Otros Tours Que Te Pueden Gustar"
