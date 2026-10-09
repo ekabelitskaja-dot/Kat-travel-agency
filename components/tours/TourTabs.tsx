@@ -5,7 +5,7 @@ import {useTranslations} from 'next-intl';
 
 import type {Tour} from '@/data/tours';
 import {renderMarkedText} from '@/components/shared/highlighted-text';
-import {BookTourButton} from '@/components/shared/BookTourButton';
+import {TalkToKatButton} from '@/components/shared/TalkToKatButton';
 import {TourStory} from '@/components/tours/TourStory';
 
 type TabKey = 'overview' | 'included' | 'important' | 'whatToBring' | 'pricing';
@@ -130,7 +130,7 @@ export function TourTabs({tour}: {tour: Tour}) {
               {tour.readyLine ?? t('tourDetail.readyExplore')}
             </p>
             <div className="mt-6">
-              <BookTourButton
+              <TalkToKatButton
                 variant="soft"
                 label={t('tourDetail.talkToKat')}
                 tourName={tour.name}
@@ -232,7 +232,7 @@ export function TourTabs({tour}: {tour: Tour}) {
               {t('tourDetail.pricingLargeGroupBody')}
             </p>
             <div className="mt-6">
-              <BookTourButton
+              <TalkToKatButton
                 variant="soft"
                 label={t('tourDetail.talkToKat')}
                 tourName={tour.name}

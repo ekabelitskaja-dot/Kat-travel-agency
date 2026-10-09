@@ -4,7 +4,7 @@ import {useState} from 'react';
 import {Compass, Droplets, Landmark, Sparkles, TreePalm, Turtle} from 'lucide-react';
 import {useTranslations} from 'next-intl';
 
-import {ExperienceBuilderModal} from './ExperienceBuilderModal';
+import {TalkToKatWindow} from '@/components/shared/TalkToKatButton';
 
 /** Icons floated over the card header in place of a photo. */
 const HEADER_ICONS = [Turtle, Droplets, Landmark, TreePalm, Compass];
@@ -21,7 +21,6 @@ export function ExperienceBuilderCard() {
           onClick={() => setOpen(true)}
           className="flex flex-1 flex-col text-left"
         >
-          {/* Icon header, standing in for the photo the real tours have */}
           <div className="relative flex aspect-[4/3] items-center justify-center overflow-hidden bg-accent/10">
             <div className="flex items-center gap-3">
               {HEADER_ICONS.map((IconCmp, i) => (
@@ -54,8 +53,7 @@ export function ExperienceBuilderCard() {
               </span>
             </div>
 
-            <div className="mt-auto flex items-center justify-between gap-4 pt-6">
-              <div className="text-sm text-text">{t('builder.cardPrice')}</div>
+            <div className="mt-auto flex items-center justify-end gap-4 pt-6">
               <span
                 className="inline-flex items-center rounded-full px-4 py-1.5 text-sm font-medium transition-colors duration-200 group-hover:opacity-80"
                 style={{backgroundColor: '#CAFFF5', color: '#394D4A'}}
@@ -67,7 +65,7 @@ export function ExperienceBuilderCard() {
         </button>
       </article>
 
-      <ExperienceBuilderModal isOpen={open} onClose={() => setOpen(false)} />
+      <TalkToKatWindow open={open} onClose={() => setOpen(false)} />
     </div>
   );
 }

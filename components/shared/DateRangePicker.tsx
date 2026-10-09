@@ -23,13 +23,14 @@ interface Props {
 
 const cls = {
   root: 'p-3 select-none w-full',
-  months: 'flex gap-6 w-full',
-  month: 'relative w-full',
-  month_caption: 'flex justify-center items-center h-10 mb-3 pointer-events-none',
+  months: 'relative flex w-full',
+  month: 'w-full',
+  month_caption: 'mx-0.5 mb-3 flex h-11 items-center justify-center rounded-full bg-surface pointer-events-none',
   caption_label: 'text-sm font-semibold text-text',
-  nav: 'absolute top-3 left-0 right-0 flex justify-between items-center h-10 z-10',
-  button_previous: 'h-10 w-10 flex items-center justify-center rounded-full text-accent bg-accent/5 hover:bg-accent/15 active:bg-accent/25 transition-colors touch-manipulation',
-  button_next:     'h-10 w-10 flex items-center justify-center rounded-full text-accent bg-accent/5 hover:bg-accent/15 active:bg-accent/25 transition-colors touch-manipulation',
+  nav: 'absolute inset-x-0 top-0 z-10 flex h-11 items-center justify-between px-1.5',
+  button_previous: 'grid h-8 w-8 place-items-center rounded-full text-accent hover:bg-white active:bg-white transition-colors touch-manipulation',
+  button_next: 'grid h-8 w-8 place-items-center rounded-full text-accent hover:bg-white active:bg-white transition-colors touch-manipulation',
+  chevron: 'h-4 w-4',
   month_grid: 'w-full border-collapse',
   weekdays: '',
   weekday: 'text-[11px] font-medium text-text-muted pb-2 text-center',
@@ -48,6 +49,26 @@ const cls = {
   outside: 'opacity-30',
   disabled: 'opacity-25 cursor-not-allowed',
 };
+
+export function SingleDateCalendar({
+  value,
+  onChange
+}: {
+  value?: Date;
+  onChange: (date: Date | undefined) => void;
+}) {
+  return (
+    <div className="rounded-2xl border border-text/10 bg-white">
+      <DayPicker
+        mode="single"
+        selected={value}
+        onSelect={onChange}
+        disabled={{before: new Date()}}
+        classNames={cls}
+      />
+    </div>
+  );
+}
 
 export function DateRangePicker({value, onChange, hasError}: Props) {
   const [open, setOpen] = useState(false);

@@ -74,7 +74,7 @@
   },
   "tours": {
     "title": "Choose your day",
-    "subtitle": "Every tour is private. Just your people, your pace, your way of exploring Mexico. Pick the adventure that calls to you, or send me a message and let's create something completely your own.",
+    "subtitle": "Every tour is private. Just your people, your pace, your way of exploring Mexico. Pick the adventure that calls to you, or <message>send me a message</message> and let's create something completely your own.",
     "filters": {
       "all": "All tours",
       "cenotes": "Cenotes & snorkeling",
@@ -201,6 +201,7 @@
     "transportValue": "Hotel pickup and drop-off included",
     "bookThis": "Book this tour",
     "talkToKat": "Talk to Kat",
+    "talkGreeting": "Hey, welcome to Mexico with Kat!\n\nAsk me anything: a question, a concern, or the start of a plan.",
     "readyExplore": "Ready to come explore with me?",
     "askWhatsapp": "Ask me a question",
     "related": "Other tours you might like"

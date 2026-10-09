@@ -1,7 +1,7 @@
 import {useTranslations} from 'next-intl';
 
 import {AnimatedSection} from '@/components/shared/AnimatedSection';
-import {BookTourButton} from '@/components/shared/BookTourButton';
+import {TalkToKatButton} from '@/components/shared/TalkToKatButton';
 import {BlobHighlight, renderMarkedText} from '@/components/shared/highlighted-text';
 import {SectionHeading} from '@/components/shared/SectionHeading';
 
@@ -49,7 +49,7 @@ export function WhyKat() {
 
   const Cta = ({className}: {className: string}) => (
     <div className={className}>
-      <BookTourButton variant="soft" label={t('tourDetail.talkToKat')} />
+      <TalkToKatButton variant="soft" label={t('tourDetail.talkToKat')} />
     </div>
   );
 

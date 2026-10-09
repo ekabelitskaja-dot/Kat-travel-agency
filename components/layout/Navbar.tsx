@@ -127,13 +127,13 @@ export function Navbar() {
               {transparent ? (
                 <button
                   type="button"
-                  onClick={() => openModal()}
+                  onClick={() => openModal(undefined, true)}
                   className="hidden md:inline-block rounded-full border border-white/60 px-5 py-2 text-sm text-white transition-colors hover:bg-white/15"
                 >
                   {t('nav.bookNow')}
                 </button>
               ) : (
-                <Button size="md" className="hidden md:inline-flex" onClick={() => openModal()}>
+                <Button size="md" className="hidden md:inline-flex" onClick={() => openModal(undefined, true)}>
                   {t('nav.bookNow')}
                 </Button>
               )}
@@ -166,7 +166,7 @@ export function Navbar() {
                   className="w-full mt-1"
                   onClick={() => {
                     setOpen(false);
-                    openModal();
+                    openModal(undefined, true);
                   }}
                 >
                   {t('nav.bookNow')}

@@ -9,7 +9,7 @@ export const WA_PHONE = '529841508096';
 /** Human-readable version, used in labels and visible text. */
 export const PHONE_DISPLAY = '+52 984 150 8096';
 
-export const EMAIL = 'motiontravelmexico@gmail.com';
+export const EMAIL = 'hola@mexicowithkat.com';
 
 /** wa.me deep link - opens the WhatsApp app on mobile, WhatsApp Web on desktop. */
 export function waLink(message: string) {

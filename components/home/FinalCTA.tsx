@@ -5,14 +5,14 @@ import {Mail, MessageCircle} from 'lucide-react';
 import {highlightAccent} from '@/components/shared/highlighted-text';
 import {EMAIL, mailLink, waLink} from '@/lib/contact';
 
-export function FinalCTA() {
+export function FinalCTA({className = ''}: {className?: string}) {
   const t = useTranslations();
 
   const waUrl = waLink("Hi Kat, I'm interested in a tour");
   const emailUrl = mailLink('Tour Inquiry');
 
   return (
-    <section id="contact" className="bg-surface">
+    <section id="contact" className={`bg-surface ${className}`}>
       <div className="mx-auto max-w-6xl px-6 pb-16 md:pb-20">
         <div
           className="rounded-3xl border border-text/10 bg-white/65 backdrop-blur-sm p-10 md:p-14"

@@ -62,7 +62,7 @@
   },
   "tours": {
     "title": "Explora con Kat",
-    "subtitle": "Cada tour es privado, cada experiencia es tuya. Elige tu aventura abajo o pídeme que construya algo personalizado.",
+    "subtitle": "Cada tour es privado, cada experiencia es tuya. Elige tu aventura abajo o <message>pídeme</message> que construya algo personalizado.",
     "filters": {
       "all": "Todos Los Tours",
       "cenotes": "Cenotes y Snorkel",
@@ -189,6 +189,7 @@
     "transportValue": "Transporte desde y hacia tu hotel incluido",
     "bookThis": "Reservar Este Tour",
     "talkToKat": "Habla con Kat",
+    "talkGreeting": "¡Hola, bienvenido a Mexico with Kat!\n\nPregúntame lo que sea: una pregunta, una inquietud o el comienzo de un plan.",
     "readyExplore": "¿Listo para explorar conmigo?",
     "askWhatsapp": "Hacer una Pregunta (WhatsApp)",
     "related": "Otros Tours Que Te Pueden Gustar"

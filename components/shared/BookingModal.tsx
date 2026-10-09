@@ -3,13 +3,12 @@
 import {createContext, useCallback, useContext, useState, useEffect, Suspense} from 'react';
 import {X} from 'lucide-react';
 import {motion, AnimatePresence} from 'framer-motion';
-import {useTranslations} from 'next-intl';
 
 import {InquiryForm} from '@/components/contact/InquiryForm';
 
 // ── Context ────────────────────────────────────────────────────────────────
 type BookingModalCtx = {
-  open: (tour?: string) => void;
+  open: (tour?: string, chooseAdventure?: boolean) => void;
   close: () => void;
 };
 
@@ -23,8 +22,13 @@ export function useBookingModal() {
 export function BookingModalProvider({children}: {children: React.ReactNode}) {
   const [isOpen, setIsOpen] = useState(false);
   const [prefillTour, setPrefillTour] = useState<string | undefined>();
+  const [chooseAdventure, setChooseAdventure] = useState(false);
 
-  const open = useCallback((tour?: string) => { setPrefillTour(tour); setIsOpen(true); }, []);
+  const open = useCallback((tour?: string, chooseAdventure = false) => {
+    setPrefillTour(tour);
+    setChooseAdventure(chooseAdventure);
+    setIsOpen(true);
+  }, []);
   const close = useCallback(() => setIsOpen(false), []);
 
   // Lock body scroll when open
@@ -43,15 +47,23 @@ export function BookingModalProvider({children}: {children: React.ReactNode}) {
   return (
     <Ctx.Provider value={{open, close}}>
       {children}
-      <BookingModal isOpen={isOpen} onClose={close} prefillTour={prefillTour} />
+      <BookingModal isOpen={isOpen} onClose={close} prefillTour={prefillTour} chooseAdventure={chooseAdventure} />
     </Ctx.Provider>
   );
 }
 
 // ── Modal ──────────────────────────────────────────────────────────────────
-function BookingModal({isOpen, onClose, prefillTour}: {isOpen: boolean; onClose: () => void; prefillTour?: string}) {
-  const t = useTranslations();
-
+function BookingModal({
+  isOpen,
+  onClose,
+  prefillTour,
+  chooseAdventure
+}: {
+  isOpen: boolean;
+  onClose: () => void;
+  prefillTour?: string;
+  chooseAdventure: boolean;
+}) {
   return (
     <AnimatePresence>
       {isOpen && (
@@ -77,7 +89,7 @@ function BookingModal({isOpen, onClose, prefillTour}: {isOpen: boolean; onClose:
             transition={{duration: 0.3, ease: [0.22, 1, 0.36, 1]}}
           >
             <div
-              className="relative w-full max-w-5xl max-h-[90vh] overflow-y-auto rounded-3xl bg-bg shadow-[0_32px_80px_rgba(0,0,0,0.25)] [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+              className="relative w-full max-w-[46rem] max-h-[90vh] overflow-y-auto rounded-3xl bg-bg shadow-[0_32px_80px_rgba(0,0,0,0.25)] [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
               onClick={e => e.stopPropagation()}
             >
               {/* Close */}
@@ -89,12 +101,9 @@ function BookingModal({isOpen, onClose, prefillTour}: {isOpen: boolean; onClose:
                 <X className="h-5 w-5" />
               </button>
 
-              <div className="p-8 md:p-12">
-                <h2 className="text-3xl md:text-4xl leading-tight mb-2">{t('contact.title')}</h2>
-                <p className="text-base text-text-muted mb-10">{t('contact.subtitle')}</p>
-
+              <div className="p-8 md:p-10">
                 <Suspense fallback={<div className="h-64 rounded-3xl bg-surface animate-pulse" />}>
-                  <InquiryForm prefillTour={prefillTour} />
+                  <InquiryForm prefillTour={prefillTour} chooseAdventure={chooseAdventure} />
                 </Suspense>
               </div>
             </div>
