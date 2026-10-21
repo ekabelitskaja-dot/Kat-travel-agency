@@ -65,7 +65,11 @@ export function ExperienceBuilderCard() {
         </button>
       </article>
 
-      <TalkToKatWindow open={open} onClose={() => setOpen(false)} />
+      <TalkToKatWindow
+        open={open}
+        onClose={() => setOpen(false)}
+        greeting={t('builder.windowGreeting')}
+      />
     </div>
   );
 }

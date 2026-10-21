@@ -11,6 +11,9 @@ export const PHONE_DISPLAY = '+52 984 150 8096';
 
 export const EMAIL = 'hola@mexicowithkat.com';
 
+/** Google Maps share link for Kat's location. */
+export const MAPS_URL = 'https://share.google/GbXtIBh7j7fwA7B8D';
+
 /** wa.me deep link - opens the WhatsApp app on mobile, WhatsApp Web on desktop. */
 export function waLink(message: string) {
   return `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(message)}`;

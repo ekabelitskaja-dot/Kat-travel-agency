@@ -14,7 +14,7 @@ const FOCUS_ICONS: Record<string, LucideIcon> = {
   'monkey-sanctuary-coba-ruins': Binoculars,
   'tulum-cenote-half-day': Sunrise,
   'three-cenotes-half-day': Droplets,
-  'half-day-jungle-adventure': TreePalm
+  'coba-and-the-maya-underworld': TreePalm
 };
 
 type GalleryItem = Tour['gallery'][number];
@@ -57,11 +57,11 @@ function GalleryTile({
 }
 
 function TourGallery({tour}: {tour: Tour}) {
-  const isCobaPuzzle = tour.slug === 'half-day-jungle-adventure';
+  const isCobaPuzzle = tour.slug === 'coba-and-the-maya-underworld';
   const video = tour.gallery.find((item) => item.video);
   const photos = tour.gallery.filter((item) => !item.video);
 
-  if (isCobaPuzzle && video) {
+  if (isCobaPuzzle && video && photos.length > 0) {
     const [topA, topB, rightA, rightB, ...bottom] = photos;
     return (
       <div className="mt-6 grid gap-4 lg:grid-cols-2">

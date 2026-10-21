@@ -1,10 +1,10 @@
 import {getTranslations} from 'next-intl/server';
-import {Mail, MessageCircle} from 'lucide-react';
+import {Mail, MapPin, MessageCircle} from 'lucide-react';
 
 import {FaqAccordion} from '@/components/contact/FaqAccordion';
 import {JsonLd} from '@/components/seo/JsonLd';
 import {faqSchema, graphSchema} from '@/lib/schema';
-import {mailLink, waLink} from '@/lib/contact';
+import {MAPS_URL, mailLink, waLink} from '@/lib/contact';
 
 export async function generateMetadata() {
   const t = await getTranslations('tourDetail');
@@ -39,7 +39,7 @@ export default async function ContactPage() {
         </div>
 
         <div className="mt-12 max-w-3xl">
-          <div className="grid gap-3 sm:grid-cols-2">
+          <div className="grid gap-3 sm:grid-cols-3">
             <a
               href={waLink("Hi Kat, I'm interested in a tour")}
               target="_blank"
@@ -61,6 +61,17 @@ export default async function ContactPage() {
                 <Mail className="h-5 w-5 text-accent" />
               </span>
               <span className="text-sm font-medium text-text">{t('contact.email.title')}</span>
+            </a>
+            <a
+              href={MAPS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 rounded-2xl border border-text/10 bg-white px-5 py-4 hover:border-accent/30 hover:bg-accent/5 transition-colors"
+            >
+              <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-accent/10">
+                <MapPin className="h-5 w-5 text-accent" />
+              </span>
+              <span className="text-sm font-medium text-text">{t('contact.maps.title')}</span>
             </a>
           </div>
           <p className="mt-6 text-sm leading-6 text-text-muted">{t('contact.hours.body')}</p>

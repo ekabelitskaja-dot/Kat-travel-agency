@@ -146,6 +146,9 @@
       "title": "Response time",
       "body": "I'm usually available 9am-6pm Mexico time (GMT-5). If I'm out on a tour, I'll reply as soon as I'm back."
     },
+    "maps": {
+      "title": "Find me on Google"
+    },
     "location": {
       "title": "Based in",
       "body": "Playa del Carmen, Quintana Roo, Mexico"
@@ -200,6 +203,7 @@
     "cardGroup": "Private, just your people",
     "cardPrice": "Built to your budget",
     "cardCta": "Start building",
+    "windowGreeting": "Hey, welcome to Mexico with Kat!\n\nLet's start planning your adventure!",
     "title": "Create your own experience",
     "close": "Close",
     "step1Eyebrow": "Step 1 of 2",

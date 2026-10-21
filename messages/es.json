@@ -126,6 +126,9 @@
       "title": "Tiempo de Respuesta",
       "body": "Generalmente respondo dentro de 1-2 horas durante el día (hora de México, GMT-5)."
     },
+    "maps": {
+      "title": "Encuéntrame en Google"
+    },
     "location": {
       "title": "Ubicada En",
       "body": "Playa del Carmen, Quintana Roo, México"
@@ -180,6 +183,7 @@
     "cardGroup": "Privado, solo tu gente",
     "cardPrice": "Ajustado a tu presupuesto",
     "cardCta": "Empezar a armar",
+    "windowGreeting": "¡Hola, bienvenido a Mexico with Kat!\n\n¡Empecemos a planear tu aventura!",
     "title": "Crea tu propia experiencia",
     "close": "Cerrar",
     "step1Eyebrow": "Paso 1 de 2",

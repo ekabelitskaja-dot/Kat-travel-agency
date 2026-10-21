@@ -11,11 +11,13 @@ import {mailLink, waLink} from '@/lib/contact';
 export function TalkToKatWindow({
   open,
   onClose,
-  tourName
+  tourName,
+  greeting
 }: {
   open: boolean;
   onClose: () => void;
   tourName?: string;
+  greeting?: string;
 }) {
   const t = useTranslations('tourDetail');
   const onCloseRef = useRef(onClose);
@@ -77,7 +79,9 @@ export function TalkToKatWindow({
               >
                 <X className="h-5 w-5" />
               </button>
-              <p className="whitespace-pre-line pr-6 text-base leading-7 text-text">{t('talkGreeting')}</p>
+              <p className="whitespace-pre-line pr-6 text-base leading-7 text-text">
+                {greeting ?? t('talkGreeting')}
+              </p>
               <div className="mt-6 grid gap-3">
                 <a
                   href={whatsappUrl}

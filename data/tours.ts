@@ -838,7 +838,7 @@ export const tours: Tour[] = [
     ]
   },
   {
-    slug: 'half-day-jungle-adventure',
+    slug: 'coba-and-the-maya-underworld',
     name: 'Coba & The Maya Underworld',
     tagline: 'Step into the mystical world of the ancient Maya, then descend into the underworld.',
     readyLine: 'Ready to discover the Maya world with me?',
@@ -961,42 +961,28 @@ export const tours: Tour[] = [
       ]
     },
     video: {
-      src: '/videos/underworld/gx011005.mp4',
-      poster: '/photos/underworld/admiring-the-cave.jpg'
+      src: '/videos/underworld/coba-ruins-riviera-maya-2.mp4',
+      poster: '/photos/underworld/coba-ruins-riviera-maya-2.jpg'
     },
     image: {
-      src: '/photos/underworld/admiring-the-cave.jpg',
-      alt: 'Guest admiring the vaulted ceiling of a cave cenote'
+      src: '/photos/underworld/coba-ruins-riviera-maya-2.jpg',
+      alt: 'The ancient ball court at Coba, seen from above'
     },
     gallery: [
       {
-        src: '/photos/underworld/beautiful-colors.jpg',
-        alt: 'Deep blues and greens of the water inside a cenote'
+        src: '/photos/underworld/coba-ruins-riviera-maya.jpg',
+        alt: 'Biking the jungle path through the ruins of Coba',
+        video: '/videos/underworld/coba-ruins-riviera-maya.mp4'
       },
       {
-        src: '/photos/underworld/img_4485.jpg',
-        alt: 'Cavern cenote lit by a single shaft of daylight'
+        src: '/photos/underworld/coba-ruins-riviera-maya-2.jpg',
+        alt: 'The ancient ball court at Coba, seen from above',
+        video: '/videos/underworld/coba-ruins-riviera-maya-2.mp4'
       },
       {
-        src: '/photos/underworld/admiring-the-cave.jpg',
-        alt: 'Video: img_4488',
-        video: '/videos/underworld/img_4488.mp4'
-      },
-      {
-        src: '/photos/underworld/img_6301.jpg',
-        alt: 'Light falling through the opening of an underground cenote'
-      },
-      {
-        src: '/photos/underworld/img_3733.jpg',
-        alt: 'Stalactites hanging over the water of the Maya underworld'
-      },
-      {
-        src: '/photos/underworld/img_2624.jpg',
-        alt: 'Still, mirror-clear water deep inside a cave cenote'
-      },
-      {
-        src: '/photos/underworld/img_4443.jpg',
-        alt: 'Swimming in the cool water beneath the jungle floor'
+        src: '/photos/underworld/coba-ruins-riviera-maya-1.jpg',
+        alt: 'Looking out over the jungle from the top of a Coba pyramid',
+        video: '/videos/underworld/coba-ruins-riviera-maya-1.mp4'
       }
     ]
   }

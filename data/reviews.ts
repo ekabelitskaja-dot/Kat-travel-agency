@@ -1,3 +1,5 @@
+import {MAPS_URL} from '@/lib/contact';
+
 export type Review = {
   name: string;
   rating: 5;
@@ -13,7 +15,7 @@ export const reviews: Review[] = [
     quote:
       'Exceptional Tour Guide! We had the pleasure of joining a tour with Kat as a group of 25 people, and the experience was flawless from start to finish.',
     source: 'Google Reviews',
-    sourceUrl: 'https://share.google/58ywIsUWfP5vLFVdG'
+    sourceUrl: MAPS_URL
   },
   {
     name: 'dianeg4148',
@@ -37,7 +39,7 @@ export const reviews: Review[] = [
     quote:
       'We booked the snorkeling tour for our anniversary and Kat made it genuinely special. She knew exactly when and where the sea turtles would be.',
     source: 'Google Reviews',
-    sourceUrl: 'https://www.google.com/maps'
+    sourceUrl: MAPS_URL
   },
   {
     name: 'Eva Katherine',
@@ -45,6 +47,6 @@ export const reviews: Review[] = [
     quote:
       'We had an incredible time on our adventure with Kat. She was super fun and professional and her joy and passion for adventure in Mexico was infectious!!!',
     source: 'Google Reviews',
-    sourceUrl: 'https://share.google/C9wfBDz3Z7fFLNTFE'
+    sourceUrl: MAPS_URL
   }
 ];
