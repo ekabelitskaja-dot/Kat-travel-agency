@@ -7,15 +7,19 @@ function isSectionHeading(text: string) {
 
 export function TourStory({tagline, description}: {tagline: string; description: string}) {
   const paragraphs = description.split('\n\n').filter(Boolean);
-  const keepOnOneLine = !tagline.includes('\n') && tagline.length <= 60;
+  const flatTagline = tagline.replace(/\n/g, ' ');
+  const keepOnOneLine = flatTagline.length <= 60;
+  const breakOnMobile = tagline.includes('\n') && keepOnOneLine;
 
   return (
     <div className="mb-6 max-w-3xl">
       <p
         className={
-          keepOnOneLine
-            ? 'whitespace-nowrap text-[clamp(0.8125rem,2.15vw+0.55rem,1.5rem)] font-semibold leading-tight text-text'
-            : 'whitespace-pre-line text-[clamp(0.8125rem,2.15vw+0.55rem,1.5rem)] font-semibold leading-tight text-text'
+          breakOnMobile
+            ? 'whitespace-pre-line text-[clamp(0.8125rem,2.15vw+0.55rem,1.5rem)] font-semibold leading-tight text-text sm:whitespace-nowrap'
+            : keepOnOneLine
+              ? 'whitespace-nowrap text-[clamp(0.8125rem,2.15vw+0.55rem,1.5rem)] font-semibold leading-tight text-text'
+              : 'whitespace-pre-line text-[clamp(0.8125rem,2.15vw+0.55rem,1.5rem)] font-semibold leading-tight text-text'
         }
       >
         {tagline}
