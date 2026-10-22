@@ -965,14 +965,38 @@ export const tours: Tour[] = [
       poster: '/photos/underworld/coba-ruins-riviera-maya-2.jpg'
     },
     image: {
-      src: '/photos/underworld/coba-ruins-riviera-maya-2.jpg',
-      alt: 'The ancient ball court at Coba, seen from above'
+      src: '/photos/underworld/coba-jungle-view-selfie.jpg',
+      alt: 'Kat looking out over the Coba jungle from the top of the pyramid'
     },
     gallery: [
       {
-        src: '/photos/underworld/coba-ruins-riviera-maya.jpg',
-        alt: 'Biking the jungle path through the ruins of Coba',
-        video: '/videos/underworld/coba-ruins-riviera-maya.mp4'
+        src: '/photos/underworld/coba-jungle-view-selfie.jpg',
+        alt: 'Kat looking out over the Coba jungle from the top of the pyramid'
+      },
+      {
+        src: '/photos/underworld/exploring-coba-maya-archaeological-site.jpg',
+        alt: 'Walking past a stone temple at the Coba ruins'
+      },
+      {
+        src: '/photos/underworld/kat-guiding-coba-ruins-mexico.jpg',
+        alt: 'Kat guiding a guest at the base of a Coba pyramid'
+      },
+      {
+        src: '/photos/underworld/biking-maya-jungle-mexico.jpg',
+        alt: 'Riding bikes along the jungle path at Coba',
+        video: '/videos/underworld/biking-maya-jungle-mexico.mp4'
+      },
+      {
+        src: '/photos/underworld/kids-atop-coba-maya-temple.jpg',
+        alt: 'Two kids sitting on the Coba pyramid, looking out over the jungle'
+      },
+      {
+        src: '/photos/underworld/kat-guiding-coba-ruins.jpg',
+        alt: 'Kat showing guests a carved stone at the Coba ruins'
+      },
+      {
+        src: '/photos/underworld/coba-maya-temple-jungle-view.jpg',
+        alt: 'The jungle and ball court seen from the top of a Coba pyramid'
       },
       {
         src: '/photos/underworld/coba-ruins-riviera-maya-2.jpg',
@@ -980,9 +1004,21 @@ export const tours: Tour[] = [
         video: '/videos/underworld/coba-ruins-riviera-maya-2.mp4'
       },
       {
-        src: '/photos/underworld/coba-ruins-riviera-maya-1.jpg',
-        alt: 'Looking out over the jungle from the top of a Coba pyramid',
-        video: '/videos/underworld/coba-ruins-riviera-maya-1.mp4'
+        src: '/photos/underworld/coba-maya-ball-court.jpg',
+        alt: 'The stone ball court at Coba, looking toward the jungle'
+      },
+      {
+        src: '/photos/underworld/crystal-clear-water-underground-cenote-mexico.jpg',
+        alt: 'Swimming in the clear water of an underground cenote'
+      },
+      {
+        src: '/photos/underworld/floating-underground-cenote-mexico.jpg',
+        alt: 'Floating in the turquoise water of an underground cenote'
+      },
+      {
+        src: '/photos/underworld/cliff-jumping-into-cenote-coba-mexico.jpg',
+        alt: 'Jumping from the rocks into a Coba cenote',
+        video: '/videos/underworld/cliff-jumping-into-cenote-coba-mexico.mp4'
       }
     ]
   }

@@ -57,30 +57,6 @@ function GalleryTile({
 }
 
 function TourGallery({tour}: {tour: Tour}) {
-  const isCobaPuzzle = tour.slug === 'coba-and-the-maya-underworld';
-  const video = tour.gallery.find((item) => item.video);
-  const photos = tour.gallery.filter((item) => !item.video);
-
-  if (isCobaPuzzle && video && photos.length > 0) {
-    const [topA, topB, rightA, rightB, ...bottom] = photos;
-    return (
-      <div className="mt-6 grid gap-4 lg:grid-cols-2">
-        {topA ? <GalleryTile img={topA} /> : null}
-        {topB ? <GalleryTile img={topB} /> : null}
-        <GalleryTile
-          img={video}
-          videoFit="nativeUntilLg"
-          className="relative overflow-hidden rounded-3xl border border-text/10 lg:row-span-2 lg:h-full lg:min-h-0"
-        />
-        {rightA ? <GalleryTile img={rightA} /> : null}
-        {rightB ? <GalleryTile img={rightB} /> : null}
-        {bottom.map((img) => (
-          <GalleryTile key={img.video ?? img.src} img={img} />
-        ))}
-      </div>
-    );
-  }
-
   return (
     <div className="mt-6 grid gap-4 sm:grid-cols-2">
       {tour.gallery.map((img) => (
