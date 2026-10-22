@@ -14,7 +14,7 @@ export async function generateMetadata({params}: {params: {slug: string}}) {
   if (!tour) return {};
   return {
     title: `${tour.name} | Kat B. Private Tours`,
-    description: tour.tagline
+    description: tour.tagline.replace(/\n/g, ' ')
   };
 }
 

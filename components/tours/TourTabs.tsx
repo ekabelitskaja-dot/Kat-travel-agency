@@ -26,7 +26,7 @@ function PricingColumn({
     <table className="w-fit border-collapse text-sm">
       <thead>
         <tr>
-          <th className="pb-3 pr-24 text-left text-xs font-medium uppercase tracking-[0.14em] text-text-muted whitespace-nowrap">
+          <th className="pb-3 pr-6 text-left text-xs font-medium uppercase tracking-[0.14em] text-text-muted whitespace-nowrap sm:pr-24">
             {groupLabel}
           </th>
           <th className="pb-3 text-left text-xs font-medium uppercase tracking-[0.14em] text-text-muted whitespace-nowrap">
@@ -39,7 +39,7 @@ function PricingColumn({
           const amount = rates[size - 1];
           return (
             <tr key={size}>
-              <td className="border-t border-text/10 py-2.5 pr-24 font-medium text-text whitespace-nowrap">
+              <td className="border-t border-text/10 py-2.5 pr-6 font-medium text-text whitespace-nowrap sm:pr-24">
                 {t('tourDetail.pricingGuest', {count: size})}
               </td>
               <td className="border-t border-text/10 py-2.5 tabular-nums text-text">
