@@ -14,17 +14,20 @@ function PricingColumn({
   sizes,
   rates,
   groupLabel,
-  priceLabel
+  priceLabel,
+  hideHeaderOnMobile = false
 }: {
   sizes: number[];
   rates: Array<number | null>;
   groupLabel: string;
   priceLabel: string;
+  /** The second table repeats these labels. On a phone the tables stack, so hide that repeat. */
+  hideHeaderOnMobile?: boolean;
 }) {
   const t = useTranslations();
   return (
     <table className="w-fit border-collapse text-sm">
-      <thead>
+      <thead className={hideHeaderOnMobile ? 'hidden sm:table-header-group' : undefined}>
         <tr>
           <th className="pb-3 pr-6 text-left text-xs font-medium uppercase tracking-[0.14em] text-text-muted whitespace-nowrap sm:pr-24">
             {groupLabel}
@@ -221,6 +224,7 @@ export function TourTabs({tour}: {tour: Tour}) {
                 rates={tour.pricePerPerson}
                 groupLabel={t('tourDetail.pricingYourGroup')}
                 priceLabel={t('tourDetail.pricingPerPerson')}
+                hideHeaderOnMobile
               />
             </div>
           ) : null}

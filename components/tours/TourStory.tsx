@@ -9,20 +9,27 @@ export function TourStory({tagline, description}: {tagline: string; description:
   const paragraphs = description.split('\n\n').filter(Boolean);
   const flatTagline = tagline.replace(/\n/g, ' ');
   const keepOnOneLine = flatTagline.length <= 60;
-  const breakOnMobile = tagline.includes('\n') && keepOnOneLine;
+  const lines = tagline.split('\n');
 
   return (
     <div className="mb-6 max-w-3xl">
       <p
         className={
-          breakOnMobile
-            ? 'whitespace-pre-line text-[clamp(0.8125rem,2.15vw+0.55rem,1.5rem)] font-semibold leading-tight text-text sm:whitespace-nowrap'
-            : keepOnOneLine
-              ? 'whitespace-nowrap text-[clamp(0.8125rem,2.15vw+0.55rem,1.5rem)] font-semibold leading-tight text-text'
-              : 'whitespace-pre-line text-[clamp(0.8125rem,2.15vw+0.55rem,1.5rem)] font-semibold leading-tight text-text'
+          keepOnOneLine
+            ? 'whitespace-nowrap text-[clamp(0.8125rem,2.15vw+0.55rem,1.5rem)] font-semibold leading-tight text-text'
+            : 'whitespace-pre-line text-[clamp(0.8125rem,2.15vw+0.55rem,1.5rem)] font-semibold leading-tight text-text'
         }
       >
-        {tagline}
+        {lines.map((line, i) =>
+          i === 0 ? (
+            line
+          ) : (
+            <span key={i} className="block sm:inline">
+              <span className="hidden sm:inline"> </span>
+              {line}
+            </span>
+          )
+        )}
       </p>
       <div className="mt-6 grid gap-5">
         {paragraphs.map((para, i) => {
